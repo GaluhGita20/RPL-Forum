@@ -2,14 +2,14 @@
 <nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop closed sidebar left delayed">
   <!-- USER AVATAR -->
   <a href="#">
-    <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;"></div>
+    <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
   </a>
   <!-- /USER AVATAR -->
 
   <!-- MENU -->
   <ul class="menu small">
     <!-- DASHBOARD-->
-    <li class="menu-item {{ $page== 'dashboard' ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->is('/mainForum')) ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link text-tooltip-tfr" href="#" data-title="Dashboard">
         <!-- MENU ITEM LINK ICON -->
@@ -22,7 +22,7 @@
     </li>
 
     <!-- FORUM -->
-    <li class="menu-item {{ $page== 'forum' ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link text-tooltip-tfr" href="{{Route('mainForum')}}" data-title="Forums">
         <!-- MENU ITEM LINK ICON -->
@@ -145,7 +145,7 @@
   <!-- MENU -->
   <ul class="menu">
     <!-- DASHBOARD-->
-    <li class="menu-item {{ $page== 'dashboard' ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->is('/mainForum')) ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="#">
         <!-- MENU ITEM LINK ICON -->
@@ -160,7 +160,7 @@
     <!-- /MENU ITEM -->
 
     <!-- FORUMS -->
-    <li class="menu-item {{ $page== 'forum' ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->
@@ -304,7 +304,7 @@
   <!-- MENU -->
   <ul class="menu">
     <!-- MENU ITEM -->
-    <li class="menu-item {{ $page== 'dashboard' ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->is('/mainForum')) ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="#">
         <!-- MENU ITEM LINK ICON -->
@@ -319,7 +319,7 @@
     <!-- /MENU ITEM -->
 
     <!-- MENU ITEM -->
-    <li class="menu-item {{ $page== 'forum' ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->

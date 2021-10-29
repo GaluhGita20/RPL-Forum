@@ -14,15 +14,14 @@
   <!-- favicon -->
   <!-- <link rel="icon" href="img/favicon.ico"> -->
   <title>AyoBisa | {{$title}}</title>
-  <!-- Livewire -->
-  @livewireStyles
 </head>
 <body>
 
-  <livewire:loader />
-  <livewire:sidebar-forum />
-  <livewire:navbar-forum />
-  <livewire:bottom-bar-mobile />
+  
+  <x-loader />
+  <x-sidebar_forum />
+  <x-navbar_forum />
+  <x-bottom_bar_mobile />
 
   @yield('content')
 
@@ -37,9 +36,9 @@
 <!-- XM_Plugins -->
 <script src="../js/vendor/xm_plugins.min.js"></script>
 <!-- tiny-slider -->
-<script src="../js/vendor/tiny-slider.min.js"></script>
+<!-- <script src="../js/vendor/tiny-slider.min.js"></script> -->
 <!-- chartJS -->
-<script src="../js/vendor/Chart.bundle.min.js"></script>
+<!-- <script src="../js/vendor/Chart.bundle.min.js"></script> -->
 <!-- global.hexagons -->
 <!-- <script src="../js/global/global.hexagons.js"></script> -->
 <!-- global.tooltips -->
@@ -47,7 +46,7 @@
 <!-- global.popups -->
 <script src="../js/global/global.popups.js"></script>
 <!-- global.charts -->
-<script src="../js/global/global.charts.js"></script>
+<!-- <script src="../js/global/global.charts.js"></script> -->
 <!-- header -->
 <script src="../js/header/header.js"></script>
 <!-- sidebar -->
@@ -58,7 +57,5 @@
 <script src="../js/form/form.utils.js"></script>
 <!-- SVG icons -->
 <script src="../js/utils/svg-loader.js"></script>
-<!-- Livewire -->
-@livewireScripts
 </body>
 </html>

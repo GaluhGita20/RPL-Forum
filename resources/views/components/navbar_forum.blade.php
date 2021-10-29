@@ -269,7 +269,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
             
@@ -296,7 +296,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -323,7 +323,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -350,7 +350,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -377,7 +377,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -886,7 +886,7 @@
             <!-- USER STATUS AVATAR -->
             <a class="user-status-avatar" href="profile-timeline.html">
               <!-- USER AVATAR -->
-              <div class="user-avatar small no-outline" style="background-image:url('asset/user/avatar-lg.png'); background-size:cover;">
+              <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;">
               </div>
               <!-- /USER AVATAR -->
             </a>

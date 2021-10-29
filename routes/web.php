@@ -2,22 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\ForumController;
 
 Route::prefix('')->group(function(){
     Route::get('/', [UserController::class,'view_home'])->name('home');
     Route::get('/login', [UserController::class,'view_login'])->name('login');
-    Route::get('/forum', [UserController::class,'view_forum'])->name('mainForum');
-    Route::get('/list-topics', [UserController::class,'view_listTopic'])->name('listTopic');
-    Route::get('/diskusi-topik', [UserController::class,'view_diskusiTopic'])->name('diskusiTopic');
+    Route::get('/forum', [ForumController::class,'view_forum'])->name('mainForum');
+    Route::get('/forum/{slug}', [ForumController::class,'view_listTopic'])->name('listTopic');
+    Route::get('/{slug}/create-topic', [ForumController::class,'create_topic'])->name('createTopic');
+    Route::post('/forum/saveNewTopic', [ForumController::class,'saveNewTopic'])->name('saveNewTopic');
+    Route::get('/forum/diskusi-topik', [UserController::class,'view_diskusiTopic'])->name('diskusiTopic');
 });

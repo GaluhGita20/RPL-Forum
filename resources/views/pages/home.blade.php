@@ -1,130 +1,333 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BIONIX 2021 - Information System Expo 2021</title>
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <meta http-equiv="Pragma" content="0">
-    <meta name="description" content="Bussiness and IT Olympiade serangkaian acara ISE! dengan konsep kompetisi tingkat nasional bagi pelajar SMA/SMK dengan menggabungkan antara bisnis dan teknologi informasi. Kompetisi terbagi menjadi 4 tahap yaitu, penyisihan 1, penyisihan 2, semifinal, dan final. Adapun penyisihan dilakukan serentak secara online di seluruh Indonesia.">
-    <meta name="keywords" content="ISE, Sistem Infomrasi ITS, Sistem Informasi, ITS, Olimpiade, Bisnis, TIK, Teknologi, Pameran IT, Konser">
-    <meta name="author" content="WebDev ISE!201">
-    <!-- Favicon -->
-    <link rel="shorcut icon" href="{{asset('../asset/logo/favicon.ico')}}" type="image/x-icon">
-    <link rel="icon" href="{{asset('../asset/logo/favicon.ico')}}" type="image/x-icon">
+<?php
+$page = "Home";
+?>
 
-    <!-- Goggle Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap" rel="stylesheet">
+@extends('layouts.template')
+@section('content')
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+@include('components.navbar')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- Vendor CSS-->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css"> 
+<!-- Banner -->
+<div class="banner" data-bg-img="assets/img/banner/banner-bg.png">
+  <div class="banner_slider">
+    <!-- Single Slider -->
+    <div class="single_slide">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <!-- Slider Content -->
+            <div class="banner_content text-center">
+              <h1>Lorem Ipsum, Dolor Sit Amet</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ab dolorem temporibus quia. Quesia
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{asset('../css/style.css') }}"> 
-</head>
-<body>
-  <div class="nav-container">
-    <nav class="navbar navbar-custom fixed-top navbar-expand-lg container-fluid mb-5">
-      <div class="logo">
-        <a href="/" class="navbar-brand"><img src="{{ asset('../asset/logo/logo-ise-2021.svg') }}" alt="logo ISE! 2021" style="width: 100%;"></a>
-      </div>
-      <div class="collapse navbar-collapse w-100 order-3 dual-collapse2 list" id="collapse_targer">
-        <ul class="border-0 nav navbar-nav nav-tabs ms-auto" role="tablist">
-          <li class="nav-item title"><a href="#" class="nav-link active">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Student Level</a></li>
-          <li class="nav-item"><a href="#" class="nav-link ">College Level</a></li>
-        </ul>
-        <a href="#" class="nav-link login" href="">Login</a>
-      </div>
-      <!-- <button class="navbar-toogle menu-btn mr-5" data-bs-toggle="collapse" data-bs-target="#collapse_target">
-        <span class="navbar-toggler-icon">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-        </span>
-      </button> -->
-    </nav>
-  </div>
-  <!-- End navbar -->
-
-
-  <!-- Start Banner section -->
-  <section id="hero">
-    <div class="swiper-container container mt-5 pt-5">
-      <div class="swipper-slide">
-        <div class="about" style="min-height: 100vh;">
-          <div class="row align-items-center">
-            <div class="col-4 " >
-              <img src="{{asset('../asset/logo/line-bionix.svg')}}" class="img-fluid" alt="">
+              <a href="#" class="btn">Explore More</a>
             </div>
+            <!-- End Slider Content -->
           </div>
-          <h1 class="title">
-            BUSINESS AND IT OLYMPIADE<br>
-            ON INFORMATION SYSTEMS EXPO
-          </h1>
-          <p >Business and IT Olympiad on Information Systems Expo, olimpiade bisnis dan IT terbesar di Indonesia
-            <br>
-          untuk tingkat pelajar SMA/SMK sederajat dan mahasiswa
-          </p>
+        </div>
+
+        <!-- Banner Images -->
+        <div class="banner-images row justify-content-between align-items-end">
+          <!-- Single Banner Image -->
+          <div class="single-banner-image text-center col-sm-6 d-none d-sm-block">
+            <div class="search-icon-box position-absolute">
+              <img src="assets/img/banner/search-icon.png" alt="">
+            </div>
+            
+            <img src="assets/img/banner/banner-image-1.png" alt="">
+          </div>
+          <!-- End Single Banner Image -->
+
+          <!-- Single Banner Image -->
+          <div class="single-banner-image text-center col-sm-6">
+            <img src="assets/img/banner/icon-1.png" alt="" class="banner-icon icon-1 fa-spin">
+            <img src="assets/img/banner/icon-2.png" alt="" class="banner-icon icon-2 fa-spin">
+            <img src="assets/img/banner/icon-3.png" alt="" class="banner-icon icon-3 fa-spin">
+            <img src="assets/img/banner/banner-image-2.png" alt="">
+          </div>
+          <!-- End Single Banner Image -->
+        </div>
+        <!-- End Banner Images -->
+      </div>
+    </div>
+    <!-- End Single Slider -->
+  </div>
+</div>
+<!-- End Banner -->
+
+<!-- Services -->
+<section class="pt-140 pb-140">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Section Title -->
+        <div class="section-title text-center">
+          <h2>Lorem Ipsum Dolor sit Amet Consectetur Adipisicing Alit<br>
+            Nam Tempora Numquam Voluptates?</h2>
+        </div>
+        <!-- End Section Title -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+          <!-- Single Service -->
+          <div class="single-service" style="height: 286px;">
+              <!-- Icon -->
+              <div class="icon">
+                <!-- Pentingg!!! Belum input icon -->
+                  <img src="/assets/img/icon/icon-1.svg" class="svg" alt="">
+              </div>
+              <!-- End Icon -->
+
+              <!-- Content -->
+              <div class="content">
+                  <h3><a href="service-details.html">First Activity</a></h3>
+                  <p>Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt nam sem.</p>
+              </div>
+              <!-- End Content -->
+          </div>
+          <!-- End Single Service -->
+      </div>
+      <div class="col-lg-4">
+          <!-- Single Service -->
+          <div class="single-service" style="height: 286px;">
+              <!-- Icon -->
+              <div class="icon">
+                <!-- Pentingg!!! Belum input icon -->
+                <img src="assets/img/icon/icon-2.svg" class="svg" alt="">
+              </div>
+              <!-- End Icon -->
+
+              <!-- Content -->
+              <div class="content">
+                <h3><a href="service-details.html">Second Activity</a></h3>
+                <p>Proin ex ipsum, facilisis id tincidunt sed, vulputate in lacus. Donec pharetra faucibus.</p>
+              </div>
+              <!-- End Content -->
+          </div>
+          <!-- End Single Service -->
+      </div>
+      <div class="col-lg-4">
+          <!-- Single Service -->
+          <div class="single-service" style="height: 286px;">
+              <!-- Icon -->
+              <div class="icon">
+                <!-- Pentingg!!! Belum input icon -->
+                <img src="assets/img/icon/icon-3.svg" class="svg" alt="">
+              </div>
+              <!-- End Icon -->
+
+              <!-- Content -->
+              <div class="content">
+                <h3><a href="service-details.html">Third Activity</a></h3>
+                <p>Cras eu elit congue, placerat dui ut, crew tincidunt nisl. Nulla leo elit, pharetra bibendum justo.</p>
+              </div>
+              <!-- End Content -->
+          </div>
+          <!-- End Single Service -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center mt-20">
+          <a href="#" class="btn-inline service-btn">View Our All Activity</a>
         </div>
       </div>
     </div>
-  </section>
-  <!-- End Banner section -->
+  </div>
+</section>
+<!-- End Services -->
 
+<!-- Feature -->
+<section class="pb-140">
+  <div class="container">
+    <div class="row justify-content-between align-items-center pb-140">
+      <div class="col-lg-5">
+        <!-- Feature Image -->
+        <div class="mb-50 mb-lg-0">
+          <!-- Belum input gambar -->
+          <img src="assets/img/feature/feature-1.png" alt="">
+        </div>
+        <!-- End Feature Image -->
+      </div>
+      <div class="col-lg-6">
+        <!-- Section Title -->
+        <div class="section-title style--two">
+            <div class="title-border">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2>First Activity Explanation</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quae perferendis repudiandae eveniet labore quia facere modi magnam vero soluta vitae excepturi, odit doloremque rem placeat, deserunt tempore officiis est.</p>
+        </div>
+        <!-- End Section Title -->
 
-  <!-- Start Kategori Lomba Section -->
-  <section class="kategori-lomba container-fluid text-center">
-    <h1 >Kategori-Lomba</h1>
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-12">
-        
+        <!-- List Check -->
+        <ul class="list-check">
+          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
+          <li>Adipisci quae perferendis repudiandae</li>
+          <li>Eveniet labore quia facere modi magnam vero soluta vitae excepturi</li>
+        </ul>
+        <!-- End List Check -->
       </div>
     </div>
-  </section>
 
-
-
-
-  <!-- Start contact whatsapp -->
-  <div class="whatsapp" id="whatsapp" title="Contact us!" style="background-color:rgb(37,211,102); padding:8px 12px; border-radius: 8px; cursor:pointer;">
-    <div class="whatsapp-desktop" style="display: none;">
-      <button class="btn-close" id="close-wa" type="button"></button>
-      <p class="text-center" style="color: whitesmoke;">Punya Pertanyaan atau Butuh Bantuan?<br>Hubungi Contact Person BIONIX</p>
-      <a href="https://wa.me/" target="_blank" class="btn text-center">
-        <i class="fab fa-whatsapp" style="font-size: 20px;" aria-hidden="true"></i> 08980231989
-      </a>
+    <div class="row pb-140">
+      <div class="col-lg-6">
+        <!-- Section Title -->
+        <div class="section-title style--two">
+            <div class="title-border">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h2>Second Activity Explanation<br>
+            "All Lorem Ipsum"</h2>
+            <p><b>Eveniet labore quia facere modi magnam vero soluta vitae excepturi adipisci quae perferendis repudiandae</b></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maiores eveniet dolorum inventore repellendus rem voluptatum asperiores, cupiditate eaque, exercitationem explicabo! Suscipit eveniet doloremque adipisci minima perspiciatis nulla obcaecati iure.</p>
+        </div>
+        <!-- End Section Title -->
+      
+        <a href="#" class="btn-inline mt-10">Read More</a>
+      </div>
+      <div class="col-lg-6 order-first order-lg-last">
+        <!-- Feature Image -->
+        <div class="mb-50 mb-lg-0">
+          <!-- Belum input gambar -->
+          <img src="assets/img/feature/feature-2.png" alt="">
+        </div>
+        <!-- End Feature Image -->
+      </div>
     </div>
-    <div class="whatsapp-icon" style="display: block;">
-      <i class="fab fa-whatsapp" style="color:whitesmoke; font-size:30px;" aria-hidden="true"></i>
-    </div>
-    <div class="whatsapp-responsive">
-      <a href="https://wa.me/08989231989" target="_blank">
-        <i class="fab fa-whatsapp" style="color: whitesmoke; font-size:30px;" aria-hidden="true"></i>
-      </a>
+
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-5">
+        <!-- Feature Image -->
+        <div class="mb-50 mb-lg-0">
+          <!-- Belum input gambar -->
+          <img src="assets/img/feature/feature-3.png" alt="">
+        </div>
+        <!-- End Feature Image -->
+      </div>
+      <div class="col-lg-6">
+        <!-- Section Title -->
+        <div class="section-title style--two">
+          <div class="title-border">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <h2>Second Activity Explanation</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sequi facilis alias similique numquam.</p>
+        </div>
+        <!-- End Section Title -->
+  
+        <!-- List Check -->
+        <ul class="list-check">
+          <li>Consectetur adipisicing elit. Tempora eum excepturi obcaecati at animi </li>
+          <li>Minus maiores officiis impedit esse, facilis nam consequatur magnam optio harum! Voluptatum ab totam quis (nihil).</li>
+        </ul>
+        <!-- End List Check -->
+      </div>
     </div>
   </div>
+</section>
+<!-- End Feature -->
+
+
+<!-- Testimonial -->
+<section class="pt-140 pb-140">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <!-- Section Title -->
+        <div class="section-title text-center">
+          <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit <br>
+          csafe. Deserunt laudantium ratione sint rem.</h2>
+        </div>
+        <!-- End Section Title -->
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <!-- Testimonial -->
+        <div class="testimonial-slider owl-carousel" data-owl-animate-in="slideInDown" data-owl-animate-out="slideOutUp" data-owl-nav="false" data-owl-dots="true" data-owl-mouse-drag="false" data-owl-autoplay="false">
+          <!-- Single Testimonial -->
+          <div class="single-testimonial text-center">
+            <div class="single-testimonial-inner">
+
+              <div class="content">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque harum asperiores at numquam, aut odit iusto. Vero, distinctio, placeat laudantium ratione ex alias id libero labore numquam culpa quaerat quidem?.</p>
+
+                <p class="author"><b>Ashton Lees</b> <span>- CEO at COTheme</span></p>
+              </div>
+              <div class="image">
+                <img src="assets/img/author/author-1.jpg" data-rjs="2" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- End Single Testimonial -->
+
+          <!-- Single Testimonial -->
+          <div class="single-testimonial text-center">
+            <div class="single-testimonial-inner">
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem culpa minus quidem nulla debitis fugiat ex hic ipsa veritatis. Rerum quam qui omnis facere repudiandae vel, nobis non debitis!.</p>
+
+                <p class="author"><b>Sah Sojeeb</b> <span>- COO at aawards</span></p>
+              </div>
+              <div class="image">
+                <img src="assets/img/author/author-2.jpg" data-rjs="2" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- End Single Testimonial -->
+
+          <!-- Single Testimonial -->
+          <div class="single-testimonial text-center">
+            <div class="single-testimonial-inner">
+
+              <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vel illo ut laborum! Deleniti hic asperiores beatae placeat. Quos itaque facilis sit eaque accusamus minima nihil pariatur dolor eum quasi?.</p>
+
+                <p class="author"><b>XDR Emran Pro</b><span>- CR at CrazyHead</span></p>
+              </div>
+              <div class="image">
+                <img src="assets/img/author/author-3.jpg" data-rjs="2" alt="">
+              </div>
+            </div>
+          </div>
+          <!-- End Single Testimonial -->
+        </div>
+        <!-- End Testimonial -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Testimonial -->
+
+
+<!-- Other Footer -->
+<section class="other-sites">
+  <div class="container">
+    <div class="row content justify-content-center" style="align-items: center;">
+      <div class="col-lg-4 col-12 text-center text justify-content-center" style="align-items: center;">
+        <p><a class="text-decoration-none text-white" href="#">Ministry of Tourism and Creative Economy<br><span> Republic of Indonesia</span></a>
+        </p>
+      </div>
+      <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
+      <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
+      <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
+    </div>
+  </div>
+</section>
 
 
 
-  <!-- <section>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam praesentium magni repudiandae ipsa, minima ducimus fugiat quaerat quos odio sunt ullam molestias at? Odit praesentium ex eum illo, architecto amet!
-  </section> -->
-    
+@include('components.footer')
 
-  <!-- Vendor Javascript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script style="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/e60a3b7323.js" crossorigin="anonymous"></script>
-
-  <!-- Custom JS -->
-  <script src="{{asset('../js/custom.js')}}"></script>
-</body>
-</html>
+@endsection

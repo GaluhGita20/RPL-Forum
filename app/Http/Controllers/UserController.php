@@ -1,34 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\KategoriForum;
+
 
 class UserController extends Controller
 {
     public function view_home()
     {
-        return view('front-end.pages.home');
+        return view('pages.home');
     }
 
     public function view_login()
     {
-        return view('front-end.pages.login');
-    }
-
-    public function view_forum()
-    {
-        return view('front-end.pages.main-forum');
-    }
-
-    public function view_listTopic()
-    {
-        return view('front-end.pages.list-topics');
+        return view('pages.login');
     }
 
     public function view_diskusiTopic()
     {
-        return view('front-end.pages.diskusiTopik');
+        return view('pages.diskusiTopik');
     }
 }
