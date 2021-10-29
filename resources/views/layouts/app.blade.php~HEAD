@@ -17,11 +17,24 @@
 </head>
 <body>
 
+<<<<<<< HEAD:resources/views/layouts/app.blade.php
+<<<<<<< HEAD:resources/views/layouts/app.blade.php
   
   <x-loader />
   <x-sidebar_forum />
   <x-navbar_forum />
   <x-bottom_bar_mobile />
+=======
+=======
+>>>>>>> b31606b3d70be5ba625045ffe716de444e7c0eff:resources/views/front-end/layouts/app.blade.php
+  @include('front-end.components.loader')
+  @include('front-end.components.sidebar-forum')
+  @include('front-end.components.navbar-forum')
+  @include('front-end.components.bottom-bar-mobile')
+<<<<<<< HEAD:resources/views/layouts/app.blade.php
+>>>>>>> b31606b3d70be5ba625045ffe716de444e7c0eff:resources/views/front-end/layouts/app.blade.php
+=======
+>>>>>>> b31606b3d70be5ba625045ffe716de444e7c0eff:resources/views/front-end/layouts/app.blade.php
 
   @yield('content')
 
