@@ -19,8 +19,11 @@ class ForumController extends Controller
     public function view_listTopic($slug)
     {
         // return $id;
-        $data = KategoriForum::where('slug', $slug)->get()->first();
-        $topics= Topic::where('kategori_forum_id', $data->id)->get();
+        $data = KategoriForum::where('slug', $slug)->firstOrFail();
+        $id = KategoriForum::where('slug', $slug)->get('id')->first();
+        $topics= Topic::all();
+        
+        // $topics=Topic::with('kategori_forums')->where('kategori_forum_id', $id)->get();
         return view('pages.list-topics')->with(compact('topics', 'data'));
     }
 

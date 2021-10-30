@@ -18,6 +18,6 @@ class KategoriForum extends Model
 
     public function topic()
     {
-        return $this->hasMany(Topic::class);
+        return $this->hasMany(Topic::class, 'id');
     }
 }
