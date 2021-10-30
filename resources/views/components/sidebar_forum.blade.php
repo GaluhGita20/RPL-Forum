@@ -22,7 +22,7 @@
     </li>
 
     <!-- FORUM -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link text-tooltip-tfr" href="{{Route('mainForum')}}" data-title="Forums">
         <!-- MENU ITEM LINK ICON -->
@@ -160,7 +160,7 @@
     <!-- /MENU ITEM -->
 
     <!-- FORUMS -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') ? 'active' : '' }} ">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->
@@ -319,7 +319,7 @@
     <!-- /MENU ITEM -->
 
     <!-- MENU ITEM -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->

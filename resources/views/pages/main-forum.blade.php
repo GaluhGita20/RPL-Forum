@@ -165,17 +165,17 @@ $title = "Main Forum";
 
         <!-- TABLE COLUMN -->
         <div class="table-column padded-big-left">
+          <?php $n=0;?>
+          @foreach($topics as $topic)
+          @if($topic->kategori_forum_id == $kategori->id)
+          <?php $n++;?>
+          @if($n <= 3)
           <!-- TABLE LINK -->
-          <a class="table-link" href="#">Yuk bantu saudara kita yang terdampak banjir di Kalimantan Selatan.</a>
+          <a class="table-link" href="{{Route('diskusiTopic')}}">{{$topic->name}}</a>
           <!-- /TABLE LINK -->
-
-          <!-- TABLE LINK -->
-          <a class="table-link" href="#">Gunung Semeru aktif kembali! Siaga meletus!</a>
-          <!-- /TABLE LINK -->
-
-          <!-- TABLE LINK -->
-          <a class="table-link" href="#">Gempa Mamuju dan Majene</a>
-          <!-- /TABLE LINK -->
+          @endif
+          @endif
+          @endforeach
         </div>
         <!-- /TABLE COLUMN -->
       </div>

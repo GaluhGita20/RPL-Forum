@@ -12,9 +12,10 @@ class ForumController extends Controller
     public function view_forum()
     {
         $kategoris = KategoriForum::all()->sortBy("id");
+        $topics = Topic::all();
         // $kategori_terakhir = KategoriForum::latest();
         // $tgl = $kategori_terakhir->created_at;
-        return view('pages.main-forum')->with(compact('kategoris'));
+        return view('pages.main-forum')->with(compact('kategoris', 'topics'));
     }
 
     public function view_listTopic($slug)

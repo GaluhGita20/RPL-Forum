@@ -42,15 +42,6 @@ class KategoriForumSeeder extends Seeder
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
-
-            [
-                'name'=>'Bencana Alam di Indonesia',
-                'slug'=>'bencana-alam-di-indonesia',
-                'desc'=>'Menyoroti bencana yang terjadi di negara tercinta kita, memberikan informasi berita dan solusi bantuan bagi saudara kita yang terkena dampak bencana.',
-                'image'=>'',
-                'created_at' =>Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
         ]);
     }
 }
