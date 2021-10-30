@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\KategoriForum;
 use App\Models\Topic;
+use Illuminate\Http\Request;
+
 
 class ForumController extends Controller
 {
@@ -19,10 +20,9 @@ class ForumController extends Controller
     public function view_listTopic($slug)
     {
         // return $id;
-        $data = KategoriForum::where('slug', $slug)->firstOrFail();
+        $data = KategoriForum::where('slug', $slug)->first();
         $id = KategoriForum::where('slug', $slug)->get('id')->first();
-        $topics= Topic::all();
-        
+        $topics= \DB::table('kategori_forums')->join('topics', 'topics.kategori_forum_id', '=', 'kategori_forums.id')->where('kategori_forums.slug', '=', $slug)->get();
         // $topics=Topic::with('kategori_forums')->where('kategori_forum_id', $id)->get();
         return view('pages.list-topics')->with(compact('topics', 'data'));
     }

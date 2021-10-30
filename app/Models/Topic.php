@@ -12,8 +12,8 @@ class Topic extends Model
     protected $primarykey='id';
     protected $fillable=['kategori_forum_id', 'name', 'is_pinned'];
 
-    public function kategori_forums()
+    public function kategori_forum()
     {
-        return $this->belongsTo(KategoriForum::class, 'kategori_forum_id');
+        return $this->belongsTo(KategoriForum::class);
     }
 }
