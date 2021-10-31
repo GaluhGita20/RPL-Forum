@@ -6,327 +6,233 @@ $page = "Home";
 @section('content')
 
 @include('components.navbar')
+    <!-- Additional CSS Files -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/landing/template.css">
+    <link rel="stylesheet" href="../css/landing/landing.css">
 
-<!-- Banner -->
-<div class="banner" data-bg-img="assets/img/banner/banner-bg.png">
-  <div class="banner_slider">
-    <!-- Single Slider -->
-    <div class="single_slide">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <!-- Slider Content -->
-            <div class="banner_content text-center">
-              <h1>Lorem Ipsum, Dolor Sit Amet</h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore ab dolorem temporibus quia. Quesia
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit</p>
 
-              <a href="#" class="btn">Explore More</a>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">AyoBisa</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Ayo Mulai Diskusi dan Berbagi dengan AyoBisa</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-center text-lg-start">
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Mulai Diskusi</span>
+                <div class="psvg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+                </div>
+              </a>
+              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Ayo Berbagi</span>
+                <div class="psvg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                  </svg>
+                </div>
+              </a>
             </div>
-            <!-- End Slider Content -->
           </div>
         </div>
-
-        <!-- Banner Images -->
-        <div class="banner-images row justify-content-between align-items-end">
-          <!-- Single Banner Image -->
-          <div class="single-banner-image text-center col-sm-6 d-none d-sm-block">
-            <div class="search-icon-box position-absolute">
-              <img src="assets/img/banner/search-icon.png" alt="">
-            </div>
-            
-            <img src="assets/img/banner/banner-image-1.png" alt="">
-          </div>
-          <!-- End Single Banner Image -->
-
-          <!-- Single Banner Image -->
-          <div class="single-banner-image text-center col-sm-6">
-            <img src="assets/img/banner/icon-1.png" alt="" class="banner-icon icon-1 fa-spin">
-            <img src="assets/img/banner/icon-2.png" alt="" class="banner-icon icon-2 fa-spin">
-            <img src="assets/img/banner/icon-3.png" alt="" class="banner-icon icon-3 fa-spin">
-            <img src="assets/img/banner/banner-image-2.png" alt="">
-          </div>
-          <!-- End Single Banner Image -->
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="../asset/landing/hero-img.png" class="img-fluid" alt="">
         </div>
-        <!-- End Banner Images -->
       </div>
     </div>
-    <!-- End Single Slider -->
+
+  </section><!-- End Hero -->
+
+<!-- ======= Values Section ======= -->
+<section id="values" class="values">
+
+<div class="pt-5 container" data-aos="fade-up">
+
+  <header class="section-header">
+    <p>Bisa Apa Saja dengan AyoBisa?</p>
+  </header>
+
+  <div class="row">
+
+    <div class="col-lg-4">
+      <div class="box" data-aos="fade-up" data-aos-delay="200">
+        <img src="../asset/landing/features-1.png" class="img-fluid" alt="">
+        <h3>Ad cupiditate sed est odio</h3>
+        <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 mt-4 mt-lg-0">
+      <div class="box" data-aos="fade-up" data-aos-delay="400">
+        <img src="../asset/landing/features-2.png" class="img-fluid" alt="">
+        <h3>Voluptatem voluptatum alias</h3>
+        <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 mt-4 mt-lg-0">
+      <div class="box" data-aos="fade-up" data-aos-delay="600">
+        <img src="../asset/landing/features-1.png" class="img-fluid" alt="">
+        <h3>Fugit cupiditate alias nobis.</h3>
+        <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</section><!-- End Values Section -->
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+
+<div class="pb-5 container" data-aos="fade-up">
+  <div class="row gx-0">
+
+    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+      <div class="content">
+        <h2>Forum di KitaBisa</h2>
+        <p>
+          Quisquam vel ut sint cum eos hic dolores aperiam. Sed deserunt et. Inventore et et dolor consequatur itaque ut voluptate sed et. Magnam nam ipsum tenetur suscipit voluptatum nam et est corrupti.
+        </p>
+        <div class="text-center text-lg-start">
+          <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+            <span>Read More</span>
+            <div class="psvg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+      <img src="../asset/landing/about.jpg" class="img-fluid" alt="">
+    </div>
+
   </div>
 </div>
-<!-- End Banner -->
 
-<!-- Services -->
-<section class="pt-140 pb-140">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <!-- Section Title -->
-        <div class="section-title text-center">
-          <h2>Lorem Ipsum Dolor sit Amet Consectetur Adipisicing Alit<br>
-            Nam Tempora Numquam Voluptates?</h2>
+</section><!-- End About Section -->
+
+ <!-- ======= F.A.Q Section ======= -->
+ <section id="faq" class="faq">
+
+<div class="container pt-5 pb-5" data-aos="fade-up">
+
+  <header class="section-header">
+    <p>Hal yang Sering Ditanya</p>
+  </header>
+
+  <div class="row">
+    <div class="col-lg-6">
+      <!-- F.A.Q List 1-->
+      <div class="accordion accordion-flush" id="faqlist1">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+              Non consectetur a erat nam at lectus urna duis?
+            </button>
+          </h2>
+          <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+            </div>
+          </div>
         </div>
-        <!-- End Section Title -->
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-          <!-- Single Service -->
-          <div class="single-service" style="height: 286px;">
-              <!-- Icon -->
-              <div class="icon">
-                <!-- Pentingg!!! Belum input icon -->
-                  <img src="/assets/img/icon/icon-1.svg" class="svg" alt="">
-              </div>
-              <!-- End Icon -->
 
-              <!-- Content -->
-              <div class="content">
-                  <h3><a href="service-details.html">First Activity</a></h3>
-                  <p>Proin ac quam et lectus vestibulum blandit. Nunc maximus nibh at placerat tincidunt nam sem.</p>
-              </div>
-              <!-- End Content -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+              Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+            </button>
+          </h2>
+          <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+            </div>
           </div>
-          <!-- End Single Service -->
-      </div>
-      <div class="col-lg-4">
-          <!-- Single Service -->
-          <div class="single-service" style="height: 286px;">
-              <!-- Icon -->
-              <div class="icon">
-                <!-- Pentingg!!! Belum input icon -->
-                <img src="assets/img/icon/icon-2.svg" class="svg" alt="">
-              </div>
-              <!-- End Icon -->
-
-              <!-- Content -->
-              <div class="content">
-                <h3><a href="service-details.html">Second Activity</a></h3>
-                <p>Proin ex ipsum, facilisis id tincidunt sed, vulputate in lacus. Donec pharetra faucibus.</p>
-              </div>
-              <!-- End Content -->
-          </div>
-          <!-- End Single Service -->
-      </div>
-      <div class="col-lg-4">
-          <!-- Single Service -->
-          <div class="single-service" style="height: 286px;">
-              <!-- Icon -->
-              <div class="icon">
-                <!-- Pentingg!!! Belum input icon -->
-                <img src="assets/img/icon/icon-3.svg" class="svg" alt="">
-              </div>
-              <!-- End Icon -->
-
-              <!-- Content -->
-              <div class="content">
-                <h3><a href="service-details.html">Third Activity</a></h3>
-                <p>Cras eu elit congue, placerat dui ut, crew tincidunt nisl. Nulla leo elit, pharetra bibendum justo.</p>
-              </div>
-              <!-- End Content -->
-          </div>
-          <!-- End Single Service -->
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <div class="text-center mt-20">
-          <a href="#" class="btn-inline service-btn">View Our All Activity</a>
         </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+            </button>
+          </h2>
+          <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+            <div class="accordion-body">
+              Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+
+    <div class="col-lg-6">
+
+      <!-- F.A.Q List 2-->
+      <div class="accordion accordion-flush" id="faqlist2">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-1">
+              Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+            </button>
+          </h2>
+          <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+            <div class="accordion-body">
+              Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-2">
+              Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+            </button>
+          </h2>
+          <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+            <div class="accordion-body">
+              Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2-content-3">
+              Varius vel pharetra vel turpis nunc eget lorem dolor?
+            </button>
+          </h2>
+          <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+            <div class="accordion-body">
+              Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
+
+</div>
+
 </section>
-<!-- End Services -->
-
-<!-- Feature -->
-<section class="pb-140">
-  <div class="container">
-    <div class="row justify-content-between align-items-center pb-140">
-      <div class="col-lg-5">
-        <!-- Feature Image -->
-        <div class="mb-50 mb-lg-0">
-          <!-- Belum input gambar -->
-          <img src="assets/img/feature/feature-1.png" alt="">
-        </div>
-        <!-- End Feature Image -->
-      </div>
-      <div class="col-lg-6">
-        <!-- Section Title -->
-        <div class="section-title style--two">
-            <div class="title-border">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <h2>First Activity Explanation</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quae perferendis repudiandae eveniet labore quia facere modi magnam vero soluta vitae excepturi, odit doloremque rem placeat, deserunt tempore officiis est.</p>
-        </div>
-        <!-- End Section Title -->
-
-        <!-- List Check -->
-        <ul class="list-check">
-          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit</li>
-          <li>Adipisci quae perferendis repudiandae</li>
-          <li>Eveniet labore quia facere modi magnam vero soluta vitae excepturi</li>
-        </ul>
-        <!-- End List Check -->
-      </div>
-    </div>
-
-    <div class="row pb-140">
-      <div class="col-lg-6">
-        <!-- Section Title -->
-        <div class="section-title style--two">
-            <div class="title-border">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <h2>Second Activity Explanation<br>
-            "All Lorem Ipsum"</h2>
-            <p><b>Eveniet labore quia facere modi magnam vero soluta vitae excepturi adipisci quae perferendis repudiandae</b></p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, maiores eveniet dolorum inventore repellendus rem voluptatum asperiores, cupiditate eaque, exercitationem explicabo! Suscipit eveniet doloremque adipisci minima perspiciatis nulla obcaecati iure.</p>
-        </div>
-        <!-- End Section Title -->
-      
-        <a href="#" class="btn-inline mt-10">Read More</a>
-      </div>
-      <div class="col-lg-6 order-first order-lg-last">
-        <!-- Feature Image -->
-        <div class="mb-50 mb-lg-0">
-          <!-- Belum input gambar -->
-          <img src="assets/img/feature/feature-2.png" alt="">
-        </div>
-        <!-- End Feature Image -->
-      </div>
-    </div>
-
-    <div class="row justify-content-between align-items-center">
-      <div class="col-lg-5">
-        <!-- Feature Image -->
-        <div class="mb-50 mb-lg-0">
-          <!-- Belum input gambar -->
-          <img src="assets/img/feature/feature-3.png" alt="">
-        </div>
-        <!-- End Feature Image -->
-      </div>
-      <div class="col-lg-6">
-        <!-- Section Title -->
-        <div class="section-title style--two">
-          <div class="title-border">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <h2>Second Activity Explanation</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sequi facilis alias similique numquam.</p>
-        </div>
-        <!-- End Section Title -->
-  
-        <!-- List Check -->
-        <ul class="list-check">
-          <li>Consectetur adipisicing elit. Tempora eum excepturi obcaecati at animi </li>
-          <li>Minus maiores officiis impedit esse, facilis nam consequatur magnam optio harum! Voluptatum ab totam quis (nihil).</li>
-        </ul>
-        <!-- End List Check -->
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Feature -->
-
-
-<!-- Testimonial -->
-<section class="pt-140 pb-140">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <!-- Section Title -->
-        <div class="section-title text-center">
-          <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit <br>
-          csafe. Deserunt laudantium ratione sint rem.</h2>
-        </div>
-        <!-- End Section Title -->
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <!-- Testimonial -->
-        <div class="testimonial-slider owl-carousel" data-owl-animate-in="slideInDown" data-owl-animate-out="slideOutUp" data-owl-nav="false" data-owl-dots="true" data-owl-mouse-drag="false" data-owl-autoplay="false">
-          <!-- Single Testimonial -->
-          <div class="single-testimonial text-center">
-            <div class="single-testimonial-inner">
-
-              <div class="content">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque harum asperiores at numquam, aut odit iusto. Vero, distinctio, placeat laudantium ratione ex alias id libero labore numquam culpa quaerat quidem?.</p>
-
-                <p class="author"><b>Ashton Lees</b> <span>- CEO at COTheme</span></p>
-              </div>
-              <div class="image">
-                <img src="assets/img/author/author-1.jpg" data-rjs="2" alt="">
-              </div>
-            </div>
-          </div>
-          <!-- End Single Testimonial -->
-
-          <!-- Single Testimonial -->
-          <div class="single-testimonial text-center">
-            <div class="single-testimonial-inner">
-              <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem culpa minus quidem nulla debitis fugiat ex hic ipsa veritatis. Rerum quam qui omnis facere repudiandae vel, nobis non debitis!.</p>
-
-                <p class="author"><b>Sah Sojeeb</b> <span>- COO at aawards</span></p>
-              </div>
-              <div class="image">
-                <img src="assets/img/author/author-2.jpg" data-rjs="2" alt="">
-              </div>
-            </div>
-          </div>
-          <!-- End Single Testimonial -->
-
-          <!-- Single Testimonial -->
-          <div class="single-testimonial text-center">
-            <div class="single-testimonial-inner">
-
-              <div class="content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione vel illo ut laborum! Deleniti hic asperiores beatae placeat. Quos itaque facilis sit eaque accusamus minima nihil pariatur dolor eum quasi?.</p>
-
-                <p class="author"><b>XDR Emran Pro</b><span>- CR at CrazyHead</span></p>
-              </div>
-              <div class="image">
-                <img src="assets/img/author/author-3.jpg" data-rjs="2" alt="">
-              </div>
-            </div>
-          </div>
-          <!-- End Single Testimonial -->
-        </div>
-        <!-- End Testimonial -->
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Testimonial -->
-
-
-<!-- Other Footer -->
-<section class="other-sites">
-  <div class="container">
-    <div class="row content justify-content-center" style="align-items: center;">
-      <div class="col-lg-4 col-12 text-center text justify-content-center" style="align-items: center;">
-        <p><a class="text-decoration-none text-white" href="#">Ministry of Tourism and Creative Economy<br><span> Republic of Indonesia</span></a>
-        </p>
-      </div>
-      <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
-      <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
-      <div class="col-lg-2 col-sm-4 my-3 col-4 d-flex justify-content-center text-center image"><a href="#"> <img src="../asset/umum/yatch.svg" alt="" width="100%"></a></div>
-    </div>
-  </div>
-</section>
-
-
+<!-- End F.A.Q Section -->
 
 @include('components.footer')
 

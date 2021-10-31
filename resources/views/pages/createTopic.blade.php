@@ -26,7 +26,7 @@ $title = "Create Topic";
           <!-- /SECTION PRETITLE -->
 
           <!-- SECTION TITLE -->
-          <h2 class="section-title">Kategori forum "{{$data->name}}"</h2>
+          <h2 class="section-title">Kategori forum "{{$data->name_kategori}}"</h2>
           <!-- /SECTION TITLE -->
         </div>
         <!-- /SECTION HEADER INFO -->
@@ -67,7 +67,7 @@ $title = "Create Topic";
                     <select id="kategori_forum_id" name="kategori_forum_id">
                       @foreach($kategoris as $kategori)
                       <option value="{{$kategori->id}}" @if ($kategori->id == $data->id) {{'selected="selected"'}}
-                      @endif >{{$kategori->name}}</option>
+                      @endif >{{$kategori->name_kategori}}</option>
                       @endforeach
                     </select>
                     <!-- FORM SELECT ICON -->

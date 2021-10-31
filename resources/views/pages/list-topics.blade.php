@@ -37,7 +37,7 @@ $title = "List Topics";
       <!-- SECTION FILTERS BAR INFO -->
       <div class="section-filters-bar-info">
         <!-- SECTION FILTERS BAR TITLE -->
-        <p class="section-filters-bar-title"><a href="{{Route('mainForum')}}">Forums</a><span class="separator"></span><a href="{{Route('listTopic', $data->slug)}}">{{$data->name}}</a></p>
+        <p class="section-filters-bar-title"><a href="{{Route('mainForum')}}">Forums</a><span class="separator"></span><a href="{{Route('listTopic', $data->slug)}}">{{$data->name_kategori}}</a></p>
         <!-- /SECTION FILTERS BAR TITLE -->
 
         <!-- SECTION FILTERS BAR TEXT -->
@@ -135,7 +135,7 @@ $title = "List Topics";
           <!-- DISCUSSION PREVIEW -->
           <div class="discussion-preview">
             <!-- DISCUSSION PREVIEW TITLE -->
-            <a class="discussion-preview-title" href="{{Route('diskusiTopic')}}">{{$topic->name}}</a>
+            <a class="discussion-preview-title" href="{{Route('diskusiTopic')}}">{{$topic->name_topic}}</a>
             <!-- /DISCUSSION PREVIEW TITLE -->
 
             <!-- DISCUSSION PREVIEW META -->

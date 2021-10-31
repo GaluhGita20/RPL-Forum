@@ -18,7 +18,7 @@ class TopicSeeder extends Seeder
         DB::table('topics')->insert([
             [
                 'kategori_forum_id'=>'1',
-                'name'=>'Yuk bantu saudara kita yang terdampak banjir di Kalimantan Selatan.',
+                'name_topic'=>'Yuk bantu saudara kita yang terdampak banjir di Kalimantan Selatan.',
                 'is_pinned'=>'1',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -26,7 +26,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'1',
-                'name'=>'Gunung Semeru aktif kembali! Siaga meletus!',
+                'name_topic'=>'Gunung Semeru aktif kembali! Siaga meletus!',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -34,7 +34,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'1',
-                'name'=>'Gempa Mamuju dan Majene',
+                'name_topic'=>'Gempa Mamuju dan Majene',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -42,7 +42,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'2',
-                'name'=>'Diskusi bebas yuk bahas target usia bumi:)',
+                'name_topic'=>'Diskusi bebas yuk bahas target usia bumi:)',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -50,7 +50,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'2',
-                'name'=>'Inspirasi baru dalam solusi mengenai sampah',
+                'name_topic'=>'Inspirasi baru dalam solusi mengenai sampah',
                 'is_pinned'=>'1',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -58,7 +58,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'2',
-                'name'=>'Gerakan menanam pohon kembali dan penghijauan di alam bebas.',
+                'name_topic'=>'Gerakan menanam pohon kembali dan penghijauan di alam bebas.',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -66,7 +66,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'3',
-                'name'=>'Donasi ke penderita kanker, ulurkan tanganmu untuk saudara kita',
+                'name_topic'=>'Donasi ke penderita kanker, ulurkan tanganmu untuk saudara kita',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -74,7 +74,7 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'3',
-                'name'=>'Menawarkan bantuan tunawisma di Indonesia',
+                'name_topic'=>'Menawarkan bantuan tunawisma di Indonesia',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
@@ -82,35 +82,35 @@ class TopicSeeder extends Seeder
 
             [
                 'kategori_forum_id'=>'3',
-                'name'=>'Club anti bullying yuk basmi habis',
+                'name_topic'=>'Club anti bullying yuk basmi habis',
                 'is_pinned'=>'0',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
 
-            [
-                'kategori_forum_id'=>'4',
-                'name'=>'Yuk bantu saudara kita yang terdampak banjir di Kalimantan Selatan.',
-                'is_pinned'=>'1',
-                'created_at' =>Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
+            // [
+            //     'kategori_forum_id'=>'4',
+            //     'name'=>'Yuk bantu saudara kita yang terdampak banjir di Kalimantan Selatan.',
+            //     'is_pinned'=>'1',
+            //     'created_at' =>Carbon::now(),
+            //     'updated_at' => Carbon::now()
+            // ],
 
-            [
-                'kategori_forum_id'=>'4',
-                'name'=>'Gunung Semeru aktif kembali! Siaga meletus!',
-                'is_pinned'=>'0',
-                'created_at' =>Carbon::now(),
-                'updated_at' => Carbon::now()
-            ],
+            // [
+            //     'kategori_forum_id'=>'4',
+            //     'name'=>'Gunung Semeru aktif kembali! Siaga meletus!',
+            //     'is_pinned'=>'0',
+            //     'created_at' =>Carbon::now(),
+            //     'updated_at' => Carbon::now()
+            // ],
 
-            [
-                'kategori_forum_id'=>'4',
-                'name'=>'Gempa Mamuju dan Majene',
-                'is_pinned'=>'0',
-                'created_at' =>Carbon::now(),
-                'updated_at' => Carbon::now()
-            ]
+            // [
+            //     'kategori_forum_id'=>'4',
+            //     'name'=>'Gempa Mamuju dan Majene',
+            //     'is_pinned'=>'0',
+            //     'created_at' =>Carbon::now(),
+            //     'updated_at' => Carbon::now()
+            // ]
         ]);
     }
 }

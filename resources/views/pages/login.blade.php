@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- styles -->
   <link rel="stylesheet" href="css/forum.css">
-  <!-- favicon -->
-  <!-- <link rel="icon" href="img/favicon.ico"> -->
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../asset/logo/logo_black.png">
   <title>AyoBisa | Forum</title>
 </head>
 <body>

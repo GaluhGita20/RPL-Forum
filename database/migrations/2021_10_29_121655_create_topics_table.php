@@ -16,8 +16,8 @@ class CreateTopicsTable extends Migration
         Schema::create('topics', function (Blueprint $table) {
             $table->id();
             $table->unsignedBiginteger('kategori_forum_id')->unsigned();
-            // $table->unsignedBiginteger('users_id')->unsigned()->nullable();
-            $table->string('name');
+            $table->foreign('kategori_forum_id')->references('id')->on('kategori_forums')->onDelete('cascade');
+            $table->string('name_topic');
             $table->boolean('is_pinned');
             $table->timestamps();
         });

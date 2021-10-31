@@ -1,7 +1,7 @@
 <!-- NAVIGATION WIDGET -->
 <nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop closed sidebar left delayed">
   <!-- USER AVATAR -->
-  <a href="#">
+  <a href="{{Route('profileUser')}}">
     <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
   </a>
   <!-- /USER AVATAR -->
@@ -22,7 +22,7 @@
     </li>
 
     <!-- FORUM -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') || (request()->segment(2)=='create-topic') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link text-tooltip-tfr" href="{{Route('mainForum')}}" data-title="Forums">
         <!-- MENU ITEM LINK ICON -->
@@ -36,9 +36,9 @@
     <!-- /MENU ITEM -->
 
     <!-- TOP TOPICS -->
-    <li class="menu-item">
+    <li class="menu-item  {{ (request()->segment(1)=='top-topics') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link text-tooltip-tfr" href="#" data-title="Top Topics">
+      <a class="menu-item-link text-tooltip-tfr" href="{{Route('topTopics')}}" data-title="Top Topics">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-group">
           <use xlink:href="#svg-quests"></use>
@@ -52,7 +52,7 @@
     <!-- MENU ITEM -->
     <li class="menu-item">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link text-tooltip-tfr" href="quests.html" data-title="Quests">
+      <a class="menu-item-link text-tooltip-tfr" href="" data-title="Quests">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-quests">
           <use xlink:href="#svg-quests"></use>
@@ -66,7 +66,7 @@
     <!-- MENU ITEM -->
     <li class="menu-item">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link text-tooltip-tfr" href="streams.html" data-title="Streams">
+      <a class="menu-item-link text-tooltip-tfr" href="#" data-title="Streams">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-streams">
           <use xlink:href="#svg-streams"></use>
@@ -80,7 +80,7 @@
     <!-- MENU ITEM -->
     <li class="menu-item">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link text-tooltip-tfr" href="events.html" data-title="Events">
+      <a class="menu-item-link text-tooltip-tfr" href="#" data-title="Events">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-events">
           <use xlink:href="#svg-events"></use>
@@ -120,7 +120,7 @@
   <!-- USER SHORT DESCRIPTION -->
   <div class="user-short-description">
     <!-- USER SHORT DESCRIPTION AVATAR -->
-    <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+    <a class="user-short-description-avatar user-avatar medium" href="{{Route('profileUser')}}">
   
       <!-- USER AVATAR CONTENT -->
       <div class="user-avatar-content" style="background-image: url(/asset/user/avatar-lg.png); background-size:cover; width:100%; height:100%;">
@@ -133,7 +133,7 @@
     <!-- /USER SHORT DESCRIPTION AVATAR -->
 
     <!-- USER SHORT DESCRIPTION TITLE -->
-    <p class="user-short-description-title" style="margin-top:10px;"><a href="profile-timeline.html">Gita</a></p>
+    <p class="user-short-description-title" style="margin-top:10px;"><a href="{{Route('profileUser')}}">Gita</a></p>
     <!-- /USER SHORT DESCRIPTION TITLE -->
 
     <!-- USER SHORT DESCRIPTION TEXT -->
@@ -160,7 +160,7 @@
     <!-- /MENU ITEM -->
 
     <!-- FORUMS -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') ? 'active' : '' }} ">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') || (request()->segment(2)=='create-topic') ? 'active' : '' }} ">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->
@@ -175,9 +175,9 @@
     <!-- /MENU ITEM -->
 
     <!-- TOP TOPICS -->
-    <li class="menu-item">
+    <li class="menu-item {{ (request()->segment(1)=='top-topics') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link" href="#">
+      <a class="menu-item-link" href="{{Route('topTopics')}}">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-group">
           <use xlink:href="#svg-quests"></use>
@@ -270,7 +270,7 @@
     <!-- NAVIGATION WIDGET INFO -->
     <div class="navigation-widget-info">
       <!-- USER AVATAR -->
-      <a class="user-avatar small no-outline" href="#">
+      <a class="user-avatar small no-outline" href="{{Route('profileUser')}}">
         <!-- USER AVATAR CONTENT -->
         <div class="user-avatar-content" style="background-image:url(asset/user/avatar-lg.png); background-size:cover;width:100%; height:100%">
           <!-- HEXAGON -->
@@ -319,7 +319,7 @@
     <!-- /MENU ITEM -->
 
     <!-- MENU ITEM -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') || (request()->segment(2)=='create-topic') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->

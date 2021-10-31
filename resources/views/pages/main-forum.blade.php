@@ -134,7 +134,7 @@ $title = "Main Forum";
             <!-- FORUM CATEGORY INFO -->
             <div class="forum-category-info">
               <!-- FORUM CATEGORY TITLE -->
-              <p class="forum-category-title"><a href="{{ route('listTopic', ['slug' => $kategori->slug])}}">{{$kategori->name}}</a></p>
+              <p class="forum-category-title"><a href="{{ route('listTopic', ['slug' => $kategori->slug])}}">{{$kategori->name_kategori}}</a></p>
               <!-- /FORUM CATEGORY TITLE -->
 
               <!-- FORUM CATEGORY TEXT -->
@@ -171,7 +171,7 @@ $title = "Main Forum";
           <?php $n++;?>
           @if($n <= 3)
           <!-- TABLE LINK -->
-          <a class="table-link" href="{{Route('diskusiTopic')}}">{{$topic->name}}</a>
+          <a class="table-link" href="{{Route('diskusiTopic')}}">{{$topic->name_topic}}</a>
           <!-- /TABLE LINK -->
           @endif
           @endif

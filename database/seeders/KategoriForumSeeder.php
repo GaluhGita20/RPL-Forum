@@ -17,7 +17,7 @@ class KategoriForumSeeder extends Seeder
     {
         DB::table('kategori_forums')->insert([
             [
-                'name'=>'Bencana Alam di Indonesia',
+                'name_kategori'=>'Bencana Alam di Indonesia',
                 'slug'=>'bencana-alam-di-indonesia',
                 'desc'=>'Menyoroti bencana yang terjadi di negara tercinta kita, memberikan informasi berita dan solusi bantuan bagi saudara kita yang terkena dampak bencana.',
                 'image'=>'',
@@ -26,7 +26,7 @@ class KategoriForumSeeder extends Seeder
             ],
 
             [
-                'name'=>'Peduli Lingkungan',
+                'name_kategori'=>'Peduli Lingkungan',
                 'slug'=>'peduli-lingkungan',
                 'desc'=>'Membahas perubahan di lingkungan sekitar kita dan meningkatkan upaya pencegahan kerusakan alam!',
                 'image'=>'',
@@ -35,7 +35,7 @@ class KategoriForumSeeder extends Seeder
             ],
 
             [
-                'name'=>'Peduli Sosial',
+                'name_kategori'=>'Peduli Sosial',
                 'slug'=>'peduli-sosial',
                 'desc'=>'Menawarkan bantuan dalam hubungan peduli antar sesama yang membutuhkan',
                 'image'=>'',

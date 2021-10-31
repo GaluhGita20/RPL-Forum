@@ -43,7 +43,7 @@ class ForumController extends Controller
         // ]);
         $kategori = KategoriForum::where('id', $request->kategori_forum_id)->get()->first();
         $data= array(
-            'name'=>$request->name,
+            'name_topic'=>$request->name,
             'kategori_forum_id'=>$kategori->id,
             'is_pinned'=>1,
         );

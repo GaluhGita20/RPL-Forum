@@ -10,13 +10,9 @@ class KategoriForum extends Model
     use HasFactory;
     protected $table='kategori_forums';
     protected $primarykey='id';
-    protected $fillable=['name', 'slug', 'desc', 'image'];
-    // public $timestamps = false;
-    // protected $dates = ['created_at'];
-    // protected $timestamps = false;
-    // const CREATED_AT = 'create_time';
+    protected $fillable=['name_kategori', 'slug', 'desc', 'image'];
 
-    public function topic()
+    public function topics()
     {
         return $this->hasMany(Topic::class);
     }

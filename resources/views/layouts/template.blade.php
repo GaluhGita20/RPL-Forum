@@ -14,7 +14,7 @@
     <meta name="author" content="Kelompok3-TI-RPL">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="../asset/logo/logo_black.png">
 
     <!-- Web Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya:400,500,700%7CSource+Sans+Pro:400,600,700&display=swap">

@@ -11,8 +11,8 @@
   <link rel="stylesheet" href="../css/vendor/simplebar.css">
   <!-- tiny-slider styles -->
   <link rel="stylesheet" href="../css/vendor/tiny-slider.css">
-  <!-- favicon -->
-  <!-- <link rel="icon" href="img/favicon.ico"> -->
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../asset/logo/logo_black.png">
   <title>AyoBisa | {{$title}}</title>
 </head>
 <body>

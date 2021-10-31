@@ -15,7 +15,7 @@ class CreateKategoriForumsTable extends Migration
     {
         Schema::create('kategori_forums', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name_kategori');
             $table->string('slug', 255);
             $table->text('desc');
             $table->string('image')->nullable();
