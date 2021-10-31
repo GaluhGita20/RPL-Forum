@@ -30,7 +30,12 @@ class UserController extends Controller
 
     public function view_topTopics()
     {
-        $topics=Topic::join('kategori_forums', 'topics.id', '=', 'kategori_forums.id')->get(['topics.*', 'kategori_forums.*']);
+        $topics=Topic::join('kategori_forums', 'topics.kategori_forum_id', '=', 'kategori_forums.id')->get(['topics.*', 'kategori_forums.*']);
         return view('pages.top-topics')->with(compact('topics'));
+    }
+
+    public function view_history()
+    {
+        return view('pages.history');
     }
 }

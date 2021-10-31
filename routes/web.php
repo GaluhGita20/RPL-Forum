@@ -16,10 +16,13 @@ Route::prefix('')->group(function(){
     // Route::get('/forum/diskusi-topik', [UserController::class,'view_diskusiTopic'])->name('diskusiTopic');
     Route::get('/diskusi-topik', [UserController::class,'view_diskusiTopic'])->name('diskusiTopic');
 
-    //Profile
+    //User
     Route::get('/profile-user', [UserController::class,'view_profileUser'])->name('profileUser');
+    Route::get('/history', [UserController::class,'view_history'])->name('history');
 
     //Top Topics
     Route::get('/top-topics', [UserController::class,'view_topTopics'])->name('topTopics');
+
+
 
 });

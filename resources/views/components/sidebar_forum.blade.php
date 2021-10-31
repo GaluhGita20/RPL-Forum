@@ -92,9 +92,9 @@
     <!-- /MENU ITEM -->
 
     <!-- HISTORY -->
-    <li class="menu-item">
+    <li class="menu-item {{ (request()->segment(1)=='history') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link text-tooltip-tfr" href="#" data-title="History">
+      <a class="menu-item-link text-tooltip-tfr" href="{{Route('history')}}" data-title="History">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-overview">
           <use xlink:href="#svg-overview"></use>
@@ -235,9 +235,9 @@
     <!-- /MENU ITEM -->
 
     <!-- History-->
-    <li class="menu-item">
+    <li class="menu-item {{ (request()->segment(1)=='history') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link" href="#">
+      <a class="menu-item-link" href="{{Route('history')}}">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-overview">
           <use xlink:href="#svg-overview"></use>
@@ -396,9 +396,9 @@
     
 
     <!-- MENU ITEM -->
-    <li class="menu-item">
+    <li class="menu-item {{ (request()->segment(1)=='history') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
-      <a class="menu-item-link" href="#">
+      <a class="menu-item-link" href="{{Route('history')}}">
         <!-- MENU ITEM LINK ICON -->
         <svg class="menu-item-link-icon icon-overview">
           <use xlink:href="#svg-overview"></use>

@@ -61,7 +61,7 @@ $title = "Top Topics";
         <!-- TABLE HEADER COLUMN -->
         <div class="table-header-column padded-big-left">
           <!-- TABLE HEADER TITLE -->
-          <p class="table-header-title">Activity</p>
+          <p class="table-header-title">Last Activity</p>
           <!-- /TABLE HEADER TITLE -->
         </div>
         <!-- /TABLE HEADER COLUMN -->
@@ -88,7 +88,7 @@ $title = "Top Topics";
                 <!-- /DISCUSSION PREVIEW META TEXT -->
 
                 <!-- DISCUSSION PREVIEW META TEXT -->
-                <p class="discussion-preview-meta-text"><a href="{{Route('profileUser')}}">Ananda</a> 22 minutes ago<span class="separator">-</span><a class="highlighted" href="">{{$topic->name_kategori}}</a></p>
+                <p class="discussion-preview-meta-text"><a href="{{Route('profileUser')}}">Ananda</a> 22 minutes ago<span class="separator">-</span><a class="highlighted" href="{{Route('listTopic', $topic->slug)}}">{{$topic->name_kategori}}</a></p>
                 <!-- /DISCUSSION PREVIEW META TEXT -->
               </div>
               <!-- /DISCUSSION PREVIEW META -->
@@ -114,21 +114,21 @@ $title = "Top Topics";
           <!-- /TABLE COLUMN -->
   
           <!-- TABLE COLUMN -->
-          <div class="table-column padded-big-left">
+          <div class="table-column">
             <!-- USER STATUS -->
             <div class="user-status">
               <!-- USER AVATAR -->
               <a href="{{Route('profileUser')}}">
-                <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+                <div class="user-avatar small no-outline mx-auto" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
               </a>
               <!-- /USER AVATAR -->
           
               <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><a class="bold" href="profile-timeline.html">Dedens</a></p>
+              <p class="user-status-title" style="text-align:center"><a class="bold" href="{{Route('profileUser')}}">Dedens</a></p>
               <!-- /USER STATUS TITLE -->
           
               <!-- USER STATUS TEXT -->
-              <p class="user-status-text small">3 hours, 22 minutes ago</p>
+              <p class="user-status-text small" style="text-align:center">3 hours, 22 minutes ago</p>
               <!-- /USER STATUS TEXT -->
             </div>
             <!-- /USER STATUS -->

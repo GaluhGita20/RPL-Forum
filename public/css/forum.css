@@ -3416,14 +3416,14 @@ figure>img{
     font-weight:700
 }
 .exp-line-list .exp-line{
-    margin-bottom:22px
+    margin-bottom:40px
 }
 .exp-line-list .exp-line:last-child{
     margin-bottom:0
 }
 
-.exp-line{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;padding-right:100px;position:relative}.exp-line .exp-line-icon{fill:#adafca;-ms-flex-negative:0;flex-shrink:0;margin-right:18px}.exp-line .text-sticker{-ms-flex-negative:0;flex-shrink:0;margin-right:28px}.exp-line .exp-line-text{
-    font-size:.875rem;
+.exp-line{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;padding-right:100px;position:relative}.exp-line .exp-line-icon{fill:#adafca;-ms-flex-negative:0;flex-shrink:0;margin-right:40px}.exp-line .text-sticker{-ms-flex-negative:0;flex-shrink:0;margin-right:28px}.exp-line .exp-line-text{
+    font-size:1rem;
     font-weight:700;
     line-height:1.4285714286em
 }
@@ -4534,7 +4534,7 @@ figure>img{
 }
 
 .widget-box .widget-box-content.padded-for-scroll.small{
-    height:320px
+    height:100%;
 }
 
 .widget-box .widget-box-content.padded-for-scroll.medium{height:676px}.widget-box .widget-box-content.padded-for-scroll .scroll-content{padding:0 28px}.widget-box .widget-box-content.padded-for-scroll .exp-line-list{padding-top:8px}.widget-box .widget-box-content .filters+.post-preview-line-list,.widget-box .widget-box-content .filters+.user-status-list,.widget-box .widget-box-content .paragraph+.information-line-list{margin-top:24px}.widget-box .widget-box-content .week-box:last-child{
