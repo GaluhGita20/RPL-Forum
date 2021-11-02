@@ -5347,9 +5347,9 @@ figure>img{
     margin-top:-313px
 }
 
-.landing-form .form-box:last-child{
+/* .landing-form .form-box:last-child{
     margin-top:-370px
-}
+} */
 @media screen and (min-width:2560px){
     .landing-info{
         top:25%
@@ -6390,142 +6390,6 @@ figure>img{
         font-size:2.25rem
     }
 }
-.stream-box{
-    border-radius:12px;
-    background-color:#fff;
-    box-shadow:0 0 40px 0 rgba(94,92,154,.06);
-    position:relative;
-    transition:border-radius .2s ease-in-out
-}
-.stream-box.no-video-radius:hover .stream-box-info{
-    border-bottom-left-radius:12px;
-    border-bottom-right-radius:12px
-}
-.stream-box.no-video-radius .stream-box-video iframe{
-    border-radius:0
-}
-.stream-box.big:hover .stream-box-info{
-    border-bottom-left-radius:12px;
-    border-bottom-right-radius:12px
-}
-.stream-box.big .stream-box-video{
-    width:100%;
-    padding-top:56.25%;
-    position:relative
-}
-.stream-box.big .stream-box-video iframe{
-    position:absolute;
-    top:0;
-    left:0
-}
-.stream-box.big .stream-box-info{
-    padding:28px 28px 28px 88px
-}
-.stream-box.big .stream-box-info .stream-box-game-image{
-    width:44px;
-    height:60px;
-    position:absolute;
-    top:28px;
-    left:28px
-}
-.stream-box.big .stream-box-info .stream-box-title{
-    font-size:1.125rem
-}
-.stream-box.big .stream-box-info .stream-box-category{
-    margin-top:6px;
-    font-size:.875rem
-}
-.stream-box.big .stream-box-info .stream-box-views{
-    margin-top:10px;
-    color:#8f91ac;
-    font-size:.875rem;
-    font-weight:500
-}
-.stream-box .stream-box-video{
-    height:160px
-}
-.stream-box .stream-box-video iframe{
-    width:100%;
-    height:100%;
-    border-top-left-radius:12px;
-    border-top-right-radius:12px
-}
-.stream-box .stream-box-image{
-    border-radius:50%;
-    border:4px solid #fff;
-    position:absolute;
-    top:138px;
-    left:24px;
-    z-index:3
-}
-.stream-box .stream-box-info{
-    padding:22px 28px;
-    border-bottom-left-radius:12px;
-    border-bottom-right-radius:12px;
-    position:relative;
-    z-index:2;
-    transition:border-radius .2s ease-in-out
-}
-.stream-box .stream-box-info .stream-box-title{
-    font-size:.875rem;
-    font-weight:700
-}
-.stream-box .stream-box-info .stream-box-title a{
-    color:#3e3f5e;
-    font-weight:700
-}
-.stream-box .stream-box-info .stream-box-text{
-    margin-top:6px;
-    font-size:.75rem;
-    font-weight:500
-}
-.stream-box .stream-box-info .stream-box-text a{
-    color:#8f91ac;
-    font-weight:500
-}
-.stream-box .stream-box-info .stream-box-category{
-    margin-top:14px;
-    font-size:.75rem;
-    font-weight:600
-}
-.stream-box .stream-box-meta{
-    display:-ms-flexbox;
-    display:flex;
-    -ms-flex-pack:center;
-    justify-content:center;
-    -ms-flex-align:center;
-    align-items:center;
-    width:100%;
-    height:77px;
-    border-top:1px solid #eaeaf5;
-    border-bottom-left-radius:12px;
-    border-bottom-right-radius:12px;
-    background-color:#fcfcfd;
-    box-shadow:0 0 40px 0 rgba(94,92,154,.06);
-    position:absolute;
-    bottom:-77px;
-    left:0;
-    z-index:9999;
-    -webkit-transform:translateY(-20px);
-    transform:translateY(-20px);
-    opacity:0;
-    visibility:hidden;
-    transition:opacity .3s ease-in-out,visibility .3s ease-in-out,-webkit-transform .3s ease-in-out;
-    transition:transform .3s ease-in-out,opacity .3s ease-in-out,visibility .3s ease-in-out;
-    transition:transform .3s ease-in-out,opacity .3s ease-in-out,visibility .3s ease-in-out,-webkit-transform .3s ease-in-out
-}
-.stream-box:hover{
-    border-bottom-left-radius:0;border-bottom-right-radius:0
-}
-.stream-box:hover .stream-box-info{
-    border-radius:0
-}
-.stream-box:hover .stream-box-meta{
-    -webkit-transform:translate(0);
-    transform:translate(0);
-    opacity:1;
-    visibility:visible
-}
 .video-box{
     border-radius:12px;
     box-shadow:0 0 40px 0 rgba(94,92,154,.06)
@@ -7435,82 +7299,6 @@ figure>img{
     width:100%;
     margin-top:38px
 }
-
-.quest-preview-list .quest-preview{margin-bottom:28px}.quest-preview-list .quest-preview:last-child{margin-bottom:0}.quest-preview .quest-preview-info{padding:2px 8px 0 42px;position:relative}.quest-preview .quest-preview-info .quest-preview-image{position:absolute;top:0;left:0;z-index:1}.quest-preview .quest-preview-info .quest-preview-title{font-size:.875rem;font-weight:700}.quest-preview .quest-preview-info .quest-preview-text{
-    margin-top:4px;
-    color:#3e3f5e;
-    font-size:.75rem;
-    font-weight:500;
-    line-height:1.3333333333em
-}
-.quest-preview .progress-stat{
-    margin-top:16px
-}
-.quest-item{
-    border-radius:12px;
-    background-color:#fff;
-    box-shadow:0 0 40px 0 rgba(94,92,154,.06);
-    position:relative}
-
-.quest-item .quest-item-cover{
-    width:100%;
-    height:120px;
-    border-top-right-radius:12px;
-    border-top-left-radius:12px
-}
-.quest-item .text-sticker{
-    position:absolute;
-    top:10px;
-    right:-6px
-}
-.quest-item .quest-item-info{
-    padding:44px 28px 0;
-    position:relative
-}
-.quest-item .quest-item-badge{
-    border:6px solid #fff;
-    border-radius:50%;
-    position:absolute;
-    top:-28px;
-    left:22px
-}
-.quest-item .quest-item-title{
-    font-size:1.125rem;
-    font-weight:700
-}
-.quest-item .quest-item-text{
-    margin-top:18px;
-    color:#3e3f5e;
-    font-size:.875rem;
-    font-weight:500;
-    line-height:1.4285714286em
-}
-.quest-item .progress-stat{
-    max-width:228px;
-    margin-top:48px
-}
-.quest-item .quest-item-meta{
-    display:-ms-flexbox;
-    display:flex;
-    -ms-flex-align:center;
-    align-items:center;
-    margin-top:22px;
-    padding:14px 0;
-    border-top:1px solid #eaeaf5
-}    
-
-.quest-item .quest-item-meta .quest-item-meta-info{
-    margin-left:10px
-}
-.quest-item .quest-item-meta .quest-item-meta-title{
-    font-size:.75rem;
-    font-weight:700
-}
-.quest-item .quest-item-meta .quest-item-meta-text{
-    color:#3e3f5e;
-    -size:.625rem;
-    font-weight:500
-}
 .forum-post-header{
     display:-ms-flexbox;
     display:flex;
@@ -7613,9 +7401,9 @@ figure>img{
     align-items:center;
     padding-top:28px
 }
-.forum-post .forum-post-user .user-avatar.small{
-    /* display:none */
-}
+/* .forum-post .forum-post-user .user-avatar.small{
+    display:none
+} */
 .forum-post .forum-post-user .forum-post-user-title{
     margin-top:8px;
     font-size:.875rem;

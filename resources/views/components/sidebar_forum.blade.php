@@ -113,7 +113,7 @@
 <nav id="navigation-widget" class="navigation-widget navigation-widget-desktop sidebar left hidden" data-simplebar>
   <!-- NAVIGATION WIDGET COVER -->
   <figure class="navigation-widget-cover liquid">
-    <img src="img/cover/01.jpg" alt="cover-01">
+    <img src="" alt="cover-01">
   </figure>
   <!-- /NAVIGATION WIDGET COVER -->
 

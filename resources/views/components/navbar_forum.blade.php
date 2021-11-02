@@ -418,7 +418,7 @@
                 </a>
             
                 <!-- USER STATUS TITLE -->
-                <p class="user-status-title"><a class="bold" href="{{Route('profileUser')}}">User bambang</a> memberi anda sebuah like <img class="reaction" src="asset/umum/reaction/like.png" alt="reaction-like"> untuk <a class="highlighted" href="{{Route('profileUser')}}">postingan</a> Anda</p>
+                <p class="user-status-title"><a class="bold" href="{{Route('profileUser')}}">User bambang</a> memberi anda sebuah like <img class="reaction" src="../asset/umum/reaction/like.png" alt="reaction-like"> untuk <a class="highlighted" href="{{Route('profileUser')}}">postingan</a> Anda</p>
                 <!-- /USER STATUS TITLE -->
             
                 <!-- USER STATUS TIMESTAMP -->

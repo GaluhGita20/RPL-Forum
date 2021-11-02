@@ -3,10 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\RegisterController;
 
 Route::prefix('')->group(function(){
     Route::get('/', [UserController::class,'view_home'])->name('home');
-    Route::get('/login', [UserController::class,'view_login'])->name('login');
+    Route::get('/login', [RegisterController::class,'index'])->name('login');
+    Route::get('/register', [RegisterController::class,'register'])->name('register');
+    Route::get('/getdatalogin', [RegisterController::class,'get_data_register'])->name('datalogin');
 
     //Forum
     Route::get('/forum', [ForumController::class,'view_forum'])->name('mainForum');

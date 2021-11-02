@@ -18,11 +18,11 @@
   <!-- LANDING -->
   <div class="landing">
     @if(session()->has('success'))
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{session('success')}}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      @endif
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{session('success')}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
     <!-- LANDING DECORATION -->
     <div class="landing-decoration"></div>
     <!-- /LANDING DECORATION -->
@@ -72,74 +72,93 @@
     <!-- LANDING FORM -->
     <div class="landing-form">
       <!-- FORM BOX -->
-      <div class="form-box login-register-form-element" style="box-shadow: 2px 3px 4px 4px rgba(0,0,0,0.3);">
+      <div class="form-box login-register-form-element">
         <!-- FORM BOX DECORATION -->
-        <img class="form-box-decoration overflowing" src="/asset/landing/rocket.png" alt="rocket">
+        <img class="form-box-decoration" src="/asset/landing/rocket.png" alt="rocket">
         <!-- /FORM BOX DECORATION -->
 
         <!-- FORM BOX TITLE -->
-        <h2 class="form-box-title">Account Login</h2>
+        <h2 class="form-box-title">Create your Account!</h2>
         <!-- /FORM BOX TITLE -->
     
         <!-- FORM -->
-        <form class="form">
+        <form class="form" action="{{Route('datalogin')}}" method="get">
+          @csrf
           <!-- FORM ROW -->
           <div class="form-row">
             <!-- FORM ITEM -->
             <div class="form-item">
               <!-- FORM INPUT -->
               <div class="form-input">
-                <label for="login-username">Username or Email</label>
-                <input type="text" id="login-username" name="login_username">
-              </div>
-              <!-- /FORM INPUT -->
-            </div>
-            <!-- /FORM ITEM -->
-          </div>
-          <!-- /FORM ROW -->
-    
-          <!-- FORM ROW -->
-          <div class="form-row">
-            <!-- FORM ITEM -->
-            <div class="form-item">
-              <!-- FORM INPUT -->
-              <div class="form-input">
-                <label for="login-password">Password</label>
-                <input type="password" id="login-password" name="login_password">
-              </div>
-              <!-- /FORM INPUT -->
-            </div>
-            <!-- /FORM ITEM -->
-          </div>
-          <!-- /FORM ROW -->
-    
-          <!-- FORM ROW -->
-          <div class="form-row space-between">
-            <!-- FORM ITEM -->
-            <div class="form-item">
-              <!-- CHECKBOX WRAP -->
-              <div class="checkbox-wrap">
-                <input type="checkbox" id="login-remember" name="login_remember" checked>
-                <!-- CHECKBOX BOX -->
-                <div class="checkbox-box">
-                  <!-- ICON CROSS -->
-                  <svg class="icon-cross">
-                    <use xlink:href="#svg-cross"></use>
-                  </svg>
-                  <!-- /ICON CROSS -->
+                <label for="email">Your Email</label>
+                <input type="text" id="email" name="email" class="form-control @error('email') is-invalid @enderror" >
+                @error('email')
+                <div class="invalid-feedback">
+                  {{$message}}
                 </div>
-                <!-- /CHECKBOX BOX -->
-                <label for="login-remember">Remember Me</label>
+                @enderror
               </div>
-              <!-- /CHECKBOX WRAP -->
+              <!-- /FORM INPUT -->
             </div>
             <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
     
+          <!-- FORM ROW -->
+          <div class="form-row">
             <!-- FORM ITEM -->
             <div class="form-item">
-              <!-- FORM LINK -->
-              <a class="form-link" href="#">Forgot Password?</a>
-              <!-- /FORM LINK -->
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control @error('username') is-invalid @enderror">
+                @error('username')
+                <div class="invalid-feedback">
+                  {{$message}}
+                </div>
+                @enderror
+              </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror">
+                @error('password')
+                <div class="invalid-feedback">
+                  {{$message}}
+                </div>
+                @enderror
+              </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="password-repeat">Repeat Password</label>
+                <input type="password" id="password-repeat" name="password_repeat" class="form-control @error('password_repeat') is-invalid @enderror">
+                @error('password_repeat')
+                <div class="invalid-feedback">
+                  {{$message}}
+                </div>
+                @enderror
+              </div>
+              <!-- /FORM INPUT -->
             </div>
             <!-- /FORM ITEM -->
           </div>
@@ -150,7 +169,7 @@
             <!-- FORM ITEM -->
             <div class="form-item">
               <!-- BUTTON -->
-              <button class="button medium secondary">Login to your Account!</button>
+              <button class="button medium primary">Register Now!</button>
               <!-- /BUTTON -->
             </div>
             <!-- /FORM ITEM -->
@@ -159,53 +178,9 @@
         </form>
         <!-- /FORM -->
     
-        <!-- LINED TEXT -->
-        <p class="lined-text">Login with your Social Account</p>
-        <!-- /LINED TEXT -->
-    
-        <!-- SOCIAL LINKS -->
-        <div class="social-links">
-          <!-- SOCIAL LINK -->
-          <a class="social-link facebook" href="#">
-            <!-- ICON FACEBOOK -->
-            <svg class="icon-facebook">
-              <use xlink:href="#svg-facebook"></use>
-            </svg>
-            <!-- /ICON FACEBOOK -->
-          </a>
-          <!-- /SOCIAL LINK -->
-    
-          <!-- SOCIAL LINK -->
-          <a class="social-link twitter" href="#">
-            <!-- ICON TWITTER -->
-            <svg class="icon-twitter">
-              <use xlink:href="#svg-twitter"></use>
-            </svg>
-            <!-- /ICON TWITTER -->
-          </a>
-          <!-- /SOCIAL LINK -->
-    
-          <!-- SOCIAL LINK -->
-          <a class="social-link twitch" href="#">
-            <!-- ICON TWITCH -->
-            <svg class="icon-twitch">
-              <use xlink:href="#svg-twitch"></use>
-            </svg>
-            <!-- /ICON TWITCH -->
-          </a>
-          <!-- /SOCIAL LINK -->
-    
-          <!-- SOCIAL LINK -->
-          <a class="social-link youtube" href="#">
-            <!-- ICON YOUTUBE -->
-            <svg class="icon-youtube">
-              <use xlink:href="#svg-youtube"></use>
-            </svg>
-            <!-- /ICON YOUTUBE -->
-          </a>
-          <!-- /SOCIAL LINK -->
-        </div>
-        <!-- /SOCIAL LINKS -->
+        <!-- FORM TEXT -->
+        <p class="form-text">You'll receive a confirmation email in your inbox with a link to activate your account. If you have any problems, <a href="#">contact us</a>!</p>
+        <!-- /FORM TEXT -->
       </div>
       <!-- /FORM BOX -->
     </div>
@@ -224,4 +199,4 @@
 <!-- SVG icons -->
 <script src="/js/utils/svg-loader.js"></script>
 </body>
-</html>
+</html>s
