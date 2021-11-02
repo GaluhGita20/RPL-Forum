@@ -21,7 +21,7 @@ class RegisterController extends Controller
     public function get_data_register(Request $request)
     {
         $validate = $request->validate([
-            'email'=>['required', 'min:3', 'max:100', 'unique:users'],
+            'email'=>['required', 'email', 'min:3', 'max:100', 'unique:users'],
             'username' => ['required', 'min:3', 'max:100', 'unique:users'],
             'password' => ['required', 'min:8', 'max:100'],
             'password_repeat' => 'required_with:password|same:password'
