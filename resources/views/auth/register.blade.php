@@ -74,7 +74,7 @@
       <!-- FORM BOX -->
       <div class="form-box login-register-form-element">
         <!-- FORM BOX DECORATION -->
-        <img class="form-box-decoration" src="/asset/landing/rocket.png" alt="rocket">
+        <img class="form-box-decoration" src="../asset/landing/rocket.png" alt="rocket">
         <!-- /FORM BOX DECORATION -->
 
         <!-- FORM BOX TITLE -->
@@ -189,14 +189,14 @@
   <!-- /LANDING -->
 
 <!-- app -->
-<script src="/js/utils/app.js"></script>
+<script src="../js/utils/app.js"></script>
 <!-- XM_Plugins -->
-<script src="/js/vendor/xm_plugins.min.js"></script>
+<script src="../js/vendor/xm_plugins.min.js"></script>
 <!-- form.utils -->
-<script src="/js/form/form.utils.js"></script>
+<script src="../js/form/form.utils.js"></script>
 <!-- landing.tabs -->
-<script src="/js/landing/landing.tabs.js"></script>
+<script src="../js/landing/landing.tabs.js"></script>
 <!-- SVG icons -->
-<script src="/js/utils/svg-loader.js"></script>
+<script src="../js/utils/svg-loader.js"></script>
 </body>
 </html>s
