@@ -16,10 +16,10 @@
             <div class="nav-wrapper">
               <ul class="nav align-items-center">
                 <li class="current-menu-item">
-                    <a href="/">Home</a>
+                    <a href="{{Route('home')}}">Home</a>
                 </li>          
                 <li class="menu-item-has-children">
-                    <a href="{{Route('mainForum')}}">Forum</a>
+                    <a href="{{ Route('mainForum') }} ">Forum</a>
                 </li>
                 <li class="menu-item-has-children">
                     <a href="#">Pages</a>

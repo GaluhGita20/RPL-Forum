@@ -1,61 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- bootstrap 4.3.1 -->
-  <link rel="stylesheet" href="../css/vendor/bootstrap.min.css">
-  <!-- styles -->
-  <link rel="stylesheet" href="../css/forum.css">
-  <!-- simplebar styles -->
-  <link rel="stylesheet" href="../css/vendor/simplebar.css">
-  <!-- tiny-slider styles -->
-  <link rel="stylesheet" href="../css/vendor/tiny-slider.css">
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="../asset/logo/logo_black.png">
-  <title>AyoBisa | {{$title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    {{ config('app.name', 'Laravel') }}
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-  
-  <x-loader />
-  <x-sidebar_forum />
-  <x-navbar_forum />
-  <x-bottom_bar_mobile />
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
 
-  @yield('content')
+                    </ul>
 
-<!-- app -->
-<script src="../js/utils/app.js"></script>
-<!-- page loader -->
-<script src="../js/utils/page-loader.js"></script>
-<!-- simplebar -->
-<script src="../js/vendor/simplebar.min.js"></script>
-<!-- liquidify -->
-<script src="../js/utils/liquidify.js"></script>
-<!-- XM_Plugins -->
-<script src="../js/vendor/xm_plugins.min.js"></script>
-<!-- tiny-slider -->
-<!-- <script src="../js/vendor/tiny-slider.min.js"></script> -->
-<!-- chartJS -->
-<!-- <script src="../js/vendor/Chart.bundle.min.js"></script> -->
-<!-- global.hexagons -->
-<!-- <script src="../js/global/global.hexagons.js"></script> -->
-<!-- global.tooltips -->
-<script src="../js/global/global.tooltips.js"></script>
-<!-- global.popups -->
-<script src="../js/global/global.popups.js"></script>
-<!-- global.charts -->
-<!-- <script src="../js/global/global.charts.js"></script> -->
-<!-- header -->
-<script src="../js/header/header.js"></script>
-<!-- sidebar -->
-<script src="../js/sidebar/sidebar.js"></script>
-<!-- content -->
-<script src="../js/content/content.js"></script>
-<!-- form.utils -->
-<script src="../js/form/form.utils.js"></script>
-<!-- SVG icons -->
-<script src="../js/utils/svg-loader.js"></script>
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                            @endif
+
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            @yield('content')
+        </main>
+    </div>
 </body>
 </html>

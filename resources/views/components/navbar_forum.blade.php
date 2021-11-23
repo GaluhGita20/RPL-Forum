@@ -512,11 +512,11 @@
             <!-- /USER STATUS AVATAR -->
         
             <!-- USER STATUS TITLE -->
-            <p class="user-status-title"><span class="bold">Hi Gita!</span></p>
+            <p class="user-status-title"><span class="bold">Hi {{ Auth::user()->name }} !</span></p>
             <!-- /USER STATUS TITLE -->
         
             <!-- USER STATUS TEXT -->
-            <p class="user-status-text small"><a href="{{Route('profileUser')}}">@galuhgita</a></p>
+            <p class="user-status-text small"><a href="{{Route('profileUser')}}">{{ Auth::user()->email }} </a></p>
             <!-- /USER STATUS TEXT -->
           </div>
           <!-- /USER STATUS -->

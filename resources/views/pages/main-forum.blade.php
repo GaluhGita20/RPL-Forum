@@ -3,7 +3,7 @@ $title = "Main Forum";
 ?>
 
 
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
 

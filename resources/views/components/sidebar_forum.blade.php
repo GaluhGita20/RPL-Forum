@@ -133,11 +133,11 @@
     <!-- /USER SHORT DESCRIPTION AVATAR -->
 
     <!-- USER SHORT DESCRIPTION TITLE -->
-    <p class="user-short-description-title" style="margin-top:10px;"><a href="{{Route('profileUser')}}">Gita</a></p>
+    <p class="user-short-description-title" style="margin-top:10px;"><a href="{{Route('profileUser')}}">{{ Auth::user()->name }} </a></p>
     <!-- /USER SHORT DESCRIPTION TITLE -->
 
     <!-- USER SHORT DESCRIPTION TEXT -->
-    <p class="user-short-description-text"><a href="#">@galuhgita</a></p>
+    <p class="user-short-description-text"><a href="#">{{ Auth::user()->email }} </a></p>
     <!-- /USER SHORT DESCRIPTION TEXT -->
   </div>
   <!-- /USER SHORT DESCRIPTION -->

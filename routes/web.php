@@ -1,15 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\RegisterController;
 
-Route::prefix('')->group(function(){
-    Route::get('/', [UserController::class,'view_home'])->name('home');
-    Route::get('/login', [RegisterController::class,'index'])->name('login');
-    Route::get('/register', [RegisterController::class,'register'])->name('register');
-    Route::get('/getdatalogin', [RegisterController::class,'get_data_register'])->name('datalogin');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Route::get('/logout', function () {
+//     return view('pages.home')->name('logout');
+// });
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // Route::get('/user/create', [App\Http\Controllers\HomeController::class, 'add_user'])->name('add_user');
 
     //Forum
     Route::get('/forum', [ForumController::class,'view_forum'])->name('mainForum');
@@ -25,7 +31,6 @@ Route::prefix('')->group(function(){
 
     //Top Topics
     Route::get('/top-topics', [UserController::class,'view_topTopics'])->name('topTopics');
-
-
-
 });
+
+Auth::routes();
