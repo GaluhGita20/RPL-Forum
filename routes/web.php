@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
