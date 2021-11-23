@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- bootstrap 4.3.1 -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <!-- styles -->
-  <link rel="stylesheet" href="css/forum.css">
+  <link rel="stylesheet" href="../css/forum.css">
   <!-- Favicon -->
   <link rel="shortcut icon" href="../asset/logo/logo_black.png">
   <title>AyoBisa | Forum</title>
@@ -74,7 +74,7 @@
       <!-- FORM BOX -->
       <div class="form-box login-register-form-element" style="box-shadow: 2px 3px 4px 4px rgba(0,0,0,0.3);">
         <!-- FORM BOX DECORATION -->
-        <img class="form-box-decoration overflowing" src="..asset/landing/rocket.png" alt="rocket">
+        <img class="form-box-decoration overflowing" src="../asset/landing/rocket.png" alt="rocket">
         <!-- /FORM BOX DECORATION -->
 
         <!-- FORM BOX TITLE -->

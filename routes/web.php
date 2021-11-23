@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/view-login', function () {
+    return view('auth.login')->name('view-login');
+});
+
 // Route::get('/logout', function () {
 //     return view('pages.home')->name('logout');
 // });
