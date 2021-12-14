@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KategoriForum extends Model
+class Ket extends Model
 {
     use HasFactory;
-    protected $table='kategori_forums';
-    protected $primarykey='id';
-    protected $fillable=['name_kategori', 'slug', 'desc', 'image'];
+    protected $table='kets';
+    protected $guarded=['id_ket'];
+    protected $fillable=['name_kategori', 'slug_kat', 'desc', 'image'];
 
-    public function topics()
+    public function topic()
     {
         return $this->hasMany(Topic::class);
     }

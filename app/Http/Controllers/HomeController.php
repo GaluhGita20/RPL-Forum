@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\KategoriForum;
+use App\Models\Topic;
 
 class HomeController extends Controller
 {
@@ -26,11 +29,6 @@ class HomeController extends Controller
         return view('pages.home');
     }
 
-    public function add_user()
-    {
-        return view('pages.add-user');
-    }
-
     public function view_home()
     {
         return view('pages.home');
@@ -40,25 +38,5 @@ class HomeController extends Controller
     {
         return view('pages.login');
     }
-
-    public function view_diskusiTopic()
-    {
-        return view('pages.diskusiTopik');
-    }
-
-    public function view_profileUser()
-    {
-        return view('pages.profileUser');
-    }
-
-    public function view_topTopics()
-    {
-        $topics=Topic::join('kategori_forums', 'topics.kategori_forum_id', '=', 'kategori_forums.id')->get(['topics.*', 'kategori_forums.*']);
-        return view('pages.top-topics')->with(compact('topics'));
-    }
-
-    public function view_history()
-    {
-        return view('pages.history');
-    }
+    
 }

@@ -134,7 +134,7 @@ $title = "Main Forum";
             <!-- FORUM CATEGORY INFO -->
             <div class="forum-category-info">
               <!-- FORUM CATEGORY TITLE -->
-              <p class="forum-category-title"><a href="{{ route('listTopic', ['slug' => $kategori->slug])}}">{{$kategori->name_kategori}}</a></p>
+              <p class="forum-category-title"><a href="{{ route('listTopic', ['slug' => $kategori->slug_kat])}}">{{$kategori->name_kategori}}</a></p>
               <!-- /FORUM CATEGORY TITLE -->
 
               <!-- FORUM CATEGORY TEXT -->
@@ -167,11 +167,11 @@ $title = "Main Forum";
         <div class="table-column padded-big-left">
           <?php $n=0;?>
           @foreach($topics as $topic)
-          @if($topic->kategori_forum_id == $kategori->id)
+          @if($topic->ket_id == $kategori->id_ket)
           <?php $n++;?>
           @if($n <= 3)
           <!-- TABLE LINK -->
-          <a class="table-link" href="{{Route('diskusiTopic')}}">{{$topic->name_topic}}</a>
+          <a class="table-link" href="{{Route('room_diskusi', $topic->slug_topic)}}">{{$topic->name_topic}}</a>
           <!-- /TABLE LINK -->
           @endif
           @endif

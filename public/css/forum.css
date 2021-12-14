@@ -5032,8 +5032,8 @@ figure>img{
 }
 
 .user-avatar.no-outline{
-    width:92px;
-    height:92px
+    width:70px;
+    height:70px
 }
 
 .user-avatar.no-outline .user-avatar-progress,.user-avatar.no-outline .user-avatar-progress-border{top:0;left:0}.user-avatar.no-outline .user-avatar-content{
@@ -7382,7 +7382,7 @@ figure>img{
 .forum-post .forum-post-content{
     display:-ms-flexbox;
     display:flex;
-    min-height:234px
+    min-height:170px
 }
 .forum-post .forum-post-content .forum-post-user{
     width:184px;
@@ -7399,7 +7399,7 @@ figure>img{
     flex-direction:column;
     -ms-flex-align:center;
     align-items:center;
-    padding-top:28px
+    /* padding-top:28px */
 }
 /* .forum-post .forum-post-user .user-avatar.small{
     display:none
@@ -7448,7 +7448,7 @@ figure>img{
 
 .forum-post .forum-post-info .forum-post-paragraph{
     margin-top:24px;
-    font-size:.875rem;
+    font-size:1.2rem;
     line-height:1.7142857143em;
     font-weight:500
 }

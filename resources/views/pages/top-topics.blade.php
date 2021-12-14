@@ -78,17 +78,17 @@ $title = "Top Topics";
             <!-- DISCUSSION PREVIEW -->
             <div class="discussion-preview">
               <!-- DISCUSSION PREVIEW TITLE -->
-              <a class="discussion-preview-title" href="{{Route('diskusiTopic')}}">{{$topic->name_topic}}</a>
+              <a class="discussion-preview-title" href="{{Route('room_diskusi', $topic->slug_topic)}}">{{$topic->name_topic}}</a>
               <!-- /DISCUSSION PREVIEW TITLE -->
   
               <!-- DISCUSSION PREVIEW META -->
               <div class="discussion-preview-meta">
                 <!-- DISCUSSION PREVIEW META TEXT -->
-                <p class="discussion-preview-meta-text">Started by</p>
+                <p class="discussion-preview-meta-text">Started by &nbsp</p>
                 <!-- /DISCUSSION PREVIEW META TEXT -->
 
                 <!-- DISCUSSION PREVIEW META TEXT -->
-                <p class="discussion-preview-meta-text"><a href="{{Route('profileUser')}}">Ananda</a> 22 minutes ago<span class="separator">-</span><a class="highlighted" href="{{Route('listTopic', $topic->slug)}}">{{$topic->name_kategori}}</a></p>
+                <p class="discussion-preview-meta-text"><a href="{{Route('profileUser')}}">{{$topic->name}}</a> {{ \Carbon\Carbon::parse($topic->created_at)->diffForHumans() }}<span class="separator">-</span><a class="highlighted" href="{{Route('listTopic', $topic->slug_kat)}}">{{$topic->name_kategori}}</a></p>
                 <!-- /DISCUSSION PREVIEW META TEXT -->
               </div>
               <!-- /DISCUSSION PREVIEW META -->

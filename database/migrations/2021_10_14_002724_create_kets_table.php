@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKategoriForumsTable extends Migration
+class CreateKetsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateKategoriForumsTable extends Migration
      */
     public function up()
     {
-        Schema::create('kategori_forums', function (Blueprint $table) {
-            $table->id();
+        Schema::create('kets', function (Blueprint $table) {
+            $table->id('id_ket');
             $table->string('name_kategori');
-            $table->string('slug', 255);
+            $table->string('slug_kat', 255);
             $table->text('desc');
             $table->string('image')->nullable();
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreateKategoriForumsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori_forums');
+        Schema::dropIfExists('kets');
     }
 }

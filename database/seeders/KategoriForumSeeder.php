@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Carbon\Carbon;
 
 class KategoriForumSeeder extends Seeder
@@ -15,10 +16,10 @@ class KategoriForumSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('kategori_forums')->insert([
+        DB::table('kets')->insert([
             [
                 'name_kategori'=>'Bencana Alam di Indonesia',
-                'slug'=>'bencana-alam-di-indonesia',
+                'slug_kat'=>Str::slug('Bencana Alam di Indonesia', '-'),
                 'desc'=>'Menyoroti bencana yang terjadi di negara tercinta kita, memberikan informasi berita dan solusi bantuan bagi saudara kita yang terkena dampak bencana.',
                 'image'=>'',
                 'created_at' =>Carbon::now(),
@@ -27,7 +28,7 @@ class KategoriForumSeeder extends Seeder
 
             [
                 'name_kategori'=>'Peduli Lingkungan',
-                'slug'=>'peduli-lingkungan',
+                'slug_kat'=>Str::slug('Peduli Lingkungan', '-'),
                 'desc'=>'Membahas perubahan di lingkungan sekitar kita dan meningkatkan upaya pencegahan kerusakan alam!',
                 'image'=>'',
                 'created_at' =>Carbon::now(),
@@ -36,7 +37,7 @@ class KategoriForumSeeder extends Seeder
 
             [
                 'name_kategori'=>'Peduli Sosial',
-                'slug'=>'peduli-sosial',
+                'slug_kat'=>Str::slug('Peduli Sosial', '-'),
                 'desc'=>'Menawarkan bantuan dalam hubungan peduli antar sesama yang membutuhkan',
                 'image'=>'',
                 'created_at' =>Carbon::now(),

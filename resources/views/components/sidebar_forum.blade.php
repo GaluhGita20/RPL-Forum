@@ -160,7 +160,7 @@
     <!-- /MENU ITEM -->
 
     <!-- FORUMS -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') || (request()->segment(2)=='create-topic') ? 'active' : '' }} ">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='forum-diskusi') || (request()->segment(2)=='create-topic') ? 'active' : '' }} ">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->
@@ -319,7 +319,7 @@
     <!-- /MENU ITEM -->
 
     <!-- MENU ITEM -->
-    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)=='diskusi-topik') || (request()->segment(2)=='create-topic') ? 'active' : '' }}">
+    <li class="menu-item {{ (request()->segment(1)=='forum') || (request()->segment(1)== 'forum-diskusi') || (request()->segment(2)=='create-topic') ? 'active' : '' }}">
       <!-- MENU ITEM LINK -->
       <a class="menu-item-link" href="{{Route('mainForum')}}">
         <!-- MENU ITEM LINK ICON -->

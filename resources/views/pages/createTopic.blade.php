@@ -63,10 +63,10 @@ $title = "Create Topic";
                 <div class="form-item">
                   <!-- FORM SELECT -->
                   <div class="form-select">
-                    <label for="kategori_forum_id">Kategori Forum</label>
-                    <select id="kategori_forum_id" name="kategori_forum_id">
+                    <label for="kategori_id">Kategori Forum</label>
+                    <select id="kategori_id" name="kategori_id">
                       @foreach($kategoris as $kategori)
-                      <option value="{{$kategori->id}}" @if ($kategori->id == $data->id) {{'selected="selected"'}}
+                      <option value="{{$kategori->id_ket}}" @if ($kategori->id_ket == $data->id) {{'selected="selected"'}}
                       @endif >{{$kategori->name_kategori}}</option>
                       @endforeach
                     </select>

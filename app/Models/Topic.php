@@ -9,11 +9,12 @@ class Topic extends Model
 {
     use HasFactory;
     protected $table='topics';
-    protected $primarykey='id';
-    protected $fillable=['kategori_forum_id', 'name_topic', 'is_pinned'];
+    protected $guarded=['id_topic'];
+    protected $fillable=['ket_id','user_id','name_topic', 'slug_topic','is_pinned'];
+    protected $dates = ['created_at','updated_at'];
 
-    public function kategori_forums()
+    public function ket()
     {
-        return $this->belongsTo(KategoriForum::class);
+        return $this->belongsTo(Ket::class);
     }
 }

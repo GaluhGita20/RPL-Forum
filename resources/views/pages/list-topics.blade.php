@@ -30,6 +30,7 @@ $title = "List Topics";
   </div>
   <!-- /SECTION HEADER -->
 
+  @foreach($kategori as $datakategori)
   <!-- SECTION FILTERS BAR -->
   <div class="section-filters-bar v7">
     <!-- SECTION FILTERS BAR ACTIONS -->
@@ -37,16 +38,18 @@ $title = "List Topics";
       <!-- SECTION FILTERS BAR INFO -->
       <div class="section-filters-bar-info">
         <!-- SECTION FILTERS BAR TITLE -->
-        <p class="section-filters-bar-title"><a href="{{Route('mainForum')}}">Forums</a><span class="separator"></span><a href="{{Route('listTopic', $data->slug)}}">{{$data->name_kategori}}</a></p>
+        <p class="section-filters-bar-title"><a href="{{Route('mainForum')}}">Forums</a><span class="separator"></span><a href="{{Route('listTopic', $datakategori->slug_kat)}}">{{$datakategori->name_kategori}}</a></p>
         <!-- /SECTION FILTERS BAR TITLE -->
 
+        @foreach($last_topic as $lasttopic)
         <!-- SECTION FILTERS BAR TEXT -->
         <div class="section-filters-bar-text small-space">
           Last topic by &nbsp
-          <a class="bold" href="#"> Galuh Gita</a>
-          2 days ago
+          <a class="bold" href="#"> {{$lasttopic->name}}</a>
+          {{ \Carbon\Carbon::parse($lasttopic->created_at)->diffForHumans() }}
         </div>
         <!-- /SECTION FILTERS BAR TEXT -->
+        @endforeach
       </div>
       <!-- /SECTION FILTERS BAR INFO -->
     </div>
@@ -80,12 +83,13 @@ $title = "List Topics";
       <!-- /FORM -->
 
       <!-- BUTTON -->
-      <a href="{{Route('createTopic', $data->slug)}}" style="color:white;"><p class="button secondary">+ Create Discussion</p></a>
+      <a href="{{Route('createTopic', $datakategori->slug_kat)}}" style="color:white;"><p class="button secondary">+ Create Discussion</p></a>
       <!-- /BUTTON -->
     </div>
     <!-- /SECTION FILTERS BAR ACTIONS -->
   </div>
   <!-- /SECTION FILTERS BAR -->
+  @endforeach
 
   <!-- TABLE -->
   <div class="table table-forum-discussion">
@@ -135,7 +139,7 @@ $title = "List Topics";
           <!-- DISCUSSION PREVIEW -->
           <div class="discussion-preview">
             <!-- DISCUSSION PREVIEW TITLE -->
-            <a class="discussion-preview-title" href="{{Route('diskusiTopic')}}">{{$topic->name_topic}}</a>
+            <a class="discussion-preview-title" href="{{Route('room_diskusi', $topic->slug_topic)}}">{{$topic->name_topic}}</a>
             <!-- /DISCUSSION PREVIEW TITLE -->
 
             <!-- DISCUSSION PREVIEW META -->
@@ -145,7 +149,8 @@ $title = "List Topics";
               <!-- /DISCUSSION PREVIEW META TEXT -->
 
               <!-- DISCUSSION PREVIEW META TEXT -->
-              <p class="discussion-preview-meta-text"><a href="#"> belum ada user</a> 1 day ago</p>
+              <p class="discussion-preview-meta-text"><a href="#"> {{$topic->name}}</a> 
+              {{ \Carbon\Carbon::parse($topic->created_at)->diffForHumans() }}</p>
               <!-- /DISCUSSION PREVIEW META TEXT -->
             </div>
             <!-- /DISCUSSION PREVIEW META -->
