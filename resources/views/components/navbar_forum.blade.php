@@ -244,7 +244,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
             
@@ -271,7 +271,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -298,7 +298,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -325,7 +325,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -352,7 +352,7 @@
                 <!-- USER STATUS AVATAR -->
                 <div class="user-status-avatar">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;"></div>
                 </div>
                 <!-- /USER STATUS AVATAR -->
       
@@ -412,7 +412,7 @@
               <div class="user-status notification">
                 <a class="user-status-avatar" href="{{Route('profileUser')}}">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;">
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;">
                   </div>
                   <!-- /USER AVATAR -->
                 </a>
@@ -445,7 +445,7 @@
               <div class="user-status notification">
                 <a class="user-status-avatar" href="{{Route('profileUser')}}">
                   <!-- USER AVATAR -->
-                  <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;">
+                  <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;">
                   </div>
                   <!-- /USER AVATAR -->
                 </a>
@@ -505,7 +505,7 @@
             <!-- USER STATUS AVATAR -->
             <a class="user-status-avatar" href="{{Route('profileUser')}}">
               <!-- USER AVATAR -->
-              <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;">
+              <div class="user-avatar small no-outline" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover;">
               </div>
               <!-- /USER AVATAR -->
             </a>
@@ -564,8 +564,11 @@
         <!-- /DROPDOWN NAVIGATION LINK -->
   
         <!-- DROPDOWN NAVIGATION BUTTON -->
-        <p class="dropdown-navigation-button button small secondary">Logout</p>
+        <a href="{{Route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-navigation-button button small secondary">Logout</a>
         <!-- /DROPDOWN NAVIGATION BUTTON -->
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+          @csrf
+        </form>
       </div>
       <!-- /DROPDOWN NAVIGATION -->
     </div>

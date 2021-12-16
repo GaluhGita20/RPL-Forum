@@ -20,6 +20,9 @@ class CreateDiskusiForumsTable extends Migration
             $table->unsignedBiginteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->text('diskusi');
+            $table->integer('jmlh_like')->default(0);
+            $table->integer('jmlh_dislike')->default(0);
+            $table->enum('status_post', ['up', 'down'])->default('up');
             $table->timestamps();
         });
     }

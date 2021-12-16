@@ -7467,6 +7467,24 @@ figure>img{
     height:auto
 }
 
+/* Pagination */
+.w-5.h-5{
+    width: 100px;
+    height: 30px;
+    fill: #adafca;
+    opacity: .5;
+}
+
+nav.flex.items-center.justify-between{
+    margin-top:30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav .flex.justify-between, nav p.leading-5{
+    display: none;
+}
+
 @media screen and (max-width:460px){
     .forum-post-header{
         display:none

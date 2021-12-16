@@ -20,6 +20,10 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
+            $table->text('deskripsi')->nullable();
+            $table->text('alamat')->nullable();
+            $table->enum('pekerjaan', ['pelajar', 'pegawai swasta', 'pembisnis'])->nullable();
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }

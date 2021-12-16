@@ -47,7 +47,7 @@ $title = "Profile Info";
         
             <!-- USER PREVIEW INFO -->
             <div class="user-preview-info">
-              <div class="user-avatar-content mx-auto" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover; width:92px; height:92px; margin-top:-30px;"></div>
+              <div class="user-avatar-content mx-auto" style="background-image:url('../storage/{{Auth::user()->file}}'); background-size:cover; width:92px; height:92px; margin-top:-30px;"></div>
             </div>
             <!-- /USER PREVIEW INFO -->
           </div>

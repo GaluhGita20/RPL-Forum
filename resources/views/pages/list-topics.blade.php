@@ -162,7 +162,7 @@ $title = "List Topics";
         <!-- TABLE COLUMN -->
         <div class="table-column centered padded-medium">
           <!-- TABLE TITLE -->
-          <p class="table-title">19</p>
+          <p class="table-title">{{$topic->total_likes}}</p>
           <!-- /TABLE TITLE -->
         </div>
         <!-- /TABLE COLUMN -->
@@ -170,11 +170,13 @@ $title = "List Topics";
         <!-- TABLE COLUMN -->
         <div class="table-column centered padded-medium">
           <!-- TABLE TITLE -->
-          <p class="table-title">24</p>
+          <p class="table-title">{{$topic->total_voices}}</p>
           <!-- /TABLE TITLE -->
         </div>
         <!-- /TABLE COLUMN -->
 
+        @foreach($last_posts as $last_post)
+        @if($last_post->id_topic == $topic->id_topic)
         <!-- TABLE COLUMN -->
         <div class="table-column padded-big-left">
           <!-- USER STATUS -->
@@ -182,22 +184,25 @@ $title = "List Topics";
             <!-- USER STATUS AVATAR -->
             <a class="user-status-avatar" href="#">
               <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+              <div class="user-avatar small no-outline" style="background-image:url('../storage/{{$last_post->file}}'); background-size:cover;"></div>
               <!-- /USER AVATAR CONTENT -->
             </a>
             <!-- /USER STATUS AVATAR -->
         
             <!-- USER STATUS TITLE -->
-            <p class="user-status-title"><a class="bold" href="#">Bagus Prayogo</a></p>
+            <p class="user-status-title"><a class="bold" href="#">{{$last_post->name}}</a></p>
             <!-- /USER STATUS TITLE -->
         
             <!-- USER STATUS TEXT -->
-            <p class="user-status-text small">2 minutes ago</p>
+            <p class="user-status-text small">{{ \Carbon\Carbon::parse($last_post->created_at)->diffForHumans() }}</p>
             <!-- /USER STATUS TEXT -->
           </div>
           <!-- /USER STATUS -->
         </div>
         <!-- /TABLE COLUMN -->
+        @break
+        @endif
+        @endforeach
       </div>
       <!-- /TABLE ROW -->
       @endforeach

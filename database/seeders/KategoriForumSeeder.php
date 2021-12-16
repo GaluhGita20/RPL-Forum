@@ -22,6 +22,7 @@ class KategoriForumSeeder extends Seeder
                 'slug_kat'=>Str::slug('Bencana Alam di Indonesia', '-'),
                 'desc'=>'Menyoroti bencana yang terjadi di negara tercinta kita, memberikan informasi berita dan solusi bantuan bagi saudara kita yang terkena dampak bencana.',
                 'image'=>'',
+                'total_topics'=>'3',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
@@ -31,6 +32,7 @@ class KategoriForumSeeder extends Seeder
                 'slug_kat'=>Str::slug('Peduli Lingkungan', '-'),
                 'desc'=>'Membahas perubahan di lingkungan sekitar kita dan meningkatkan upaya pencegahan kerusakan alam!',
                 'image'=>'',
+                'total_topics'=>'3',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
             ],
@@ -40,6 +42,7 @@ class KategoriForumSeeder extends Seeder
                 'slug_kat'=>Str::slug('Peduli Sosial', '-'),
                 'desc'=>'Menawarkan bantuan dalam hubungan peduli antar sesama yang membutuhkan',
                 'image'=>'',
+                'total_topics'=>'3',
                 'created_at' =>Carbon::now(),
                 'updated_at' => Carbon::now()
             ],

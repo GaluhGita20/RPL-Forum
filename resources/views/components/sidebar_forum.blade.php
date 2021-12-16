@@ -2,7 +2,7 @@
 <nav id="navigation-widget-small" class="navigation-widget navigation-widget-desktop closed sidebar left delayed">
   <!-- USER AVATAR -->
   <a href="{{Route('profileUser')}}">
-    <div class="user-avatar small no-outline" style="background-image:url('../asset/user/avatar-lg.png'); background-size:cover;"></div>
+    <div class="user-avatar small no-outline" style="background-image:url('../storage/{{ Auth::user()->file }}'); background-size:cover;"></div>
   </a>
   <!-- /USER AVATAR -->
 
@@ -123,7 +123,7 @@
     <a class="user-short-description-avatar user-avatar medium" href="{{Route('profileUser')}}">
   
       <!-- USER AVATAR CONTENT -->
-      <div class="user-avatar-content" style="background-image: url(/asset/user/avatar-lg.png); background-size:cover; width:100%; height:100%;">
+      <div class="user-avatar-content" style="background-image: url(../storage/{{ Auth::user()->file }} ); background-size:cover; width:100%; height:100%;">
         <!-- HEXAGON -->
         <!-- <div class="hexagon-image-82-90" data-src="img/avatar/01.jpg"></div> -->
         <!-- /HEXAGON -->
@@ -272,7 +272,7 @@
       <!-- USER AVATAR -->
       <a class="user-avatar small no-outline" href="{{Route('profileUser')}}">
         <!-- USER AVATAR CONTENT -->
-        <div class="user-avatar-content" style="background-image:url(asset/user/avatar-lg.png); background-size:cover;width:100%; height:100%">
+        <div class="user-avatar-content" style="background-image:url(../storage/{{ Auth::user()->file }}); background-size:cover;width:100%; height:100%">
           <!-- HEXAGON -->
           <!-- <div class="hexagon-image-30-32" data-src="img/avatar/01.jpg"></div> -->
           <!-- /HEXAGON -->

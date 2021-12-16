@@ -11,6 +11,7 @@ class Ket extends Model
     protected $table='kets';
     protected $guarded=['id_ket'];
     protected $fillable=['name_kategori', 'slug_kat', 'desc', 'image'];
+    protected $casts = ['total_topics' => 'integer', 'total_posts' => 'integer'];
 
     public function topic()
     {

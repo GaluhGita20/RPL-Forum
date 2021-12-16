@@ -21,6 +21,8 @@ class CreateTopicsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('name_topic');
             $table->string('slug_topic', 255);
+            $table->integer('total_likes')->default(0);
+            $table->integer('total_voices')->default(0);
             $table->boolean('is_pinned');
             $table->timestamps();
         });

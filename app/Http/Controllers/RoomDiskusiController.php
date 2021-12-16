@@ -49,6 +49,13 @@ class RoomDiskusiController extends Controller
             'diskusi'=>$request->diskusi,
         );
         DiskusiForum::create($data);
+
+        //update topic
+        $update_kategori = Topic::where('id_topic','=',$request->topic_id)->increment('total_voices', 1);
+
+        //update kategori
+        $topic_temp = Topic::where('id_topic','=',$request->topic_id)->get()->first();
+        $update_kategori = Ket::where('id_ket','=',$topic_temp->ket_id)->increment('total_posts', 1);
         return redirect()->back();
     }
 }

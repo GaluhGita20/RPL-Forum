@@ -12,6 +12,7 @@ class DiskusiForum extends Model
     protected $guarded=['id_diskusi'];
     protected $fillable=['topic_id', 'user_id', 'diskusi'];
     protected $dates = ['created_at', 'updated_at'];
+    protected $casts = ['jmlh_like' => 'integer', 'jmlh_dislike' => 'integer'];
 
     public function topic()
     {

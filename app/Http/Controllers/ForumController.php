@@ -27,12 +27,23 @@ class ForumController extends Controller
     {
         // return $id;
         $kategori = Ket::where('slug_kat','=',$slug)->get();
+        // get list topic with condition in "slug"
         $topics = DB::table('topics')
-        ->select('topics.name_topic', 'topics.slug_topic', 'topics.created_at', 'topics.id_topic','topics.ket_id', 'kets.name_kategori', 'kets.desc', 'kets.id_ket', 'users.name')
+        ->select('topics.name_topic', 'topics.slug_topic', 'topics.created_at', 'topics.id_topic','topics.ket_id','topics.total_likes', 'topics.total_voices',  'kets.name_kategori', 'kets.desc', 'kets.id_ket', 'users.name')
         ->join('kets','topics.ket_id','=','kets.id_ket')
         ->join('users', 'topics.user_id','=','users.id')
         ->where('kets.slug_kat','=',$slug)
         ->get();
+
+        // last post in each topic
+        $last_posts = DB::table('diskusi_forums')
+        ->select('topics.id_topic', 'users.name', 'diskusi_forums.created_at', 'users.file')
+        ->join('topics','diskusi_forums.topic_id','=','topics.id_topic')
+        ->join('users', 'diskusi_forums.user_id','=','users.id')
+        ->orderBy('diskusi_forums.id_diskusi', 'desc')
+        ->get();
+        
+        // Last topic for header view
         $last_topic = DB::table('topics')
         ->select('topics.created_at','users.name')
         ->join('kets','topics.ket_id','=','kets.id_ket')
@@ -41,7 +52,7 @@ class ForumController extends Controller
         ->orderBy('topics.id_topic', 'desc')
         ->limit(1)
         ->get();
-        return view('pages.list-topics')->with(compact('topics', 'kategori', 'last_topic'));
+        return view('pages.list-topics')->with(compact('kategori','topics','last_posts', 'last_topic'));
     }
 
     public function create_topic($slug)
@@ -67,6 +78,7 @@ class ForumController extends Controller
             'is_pinned'=>0,
         );
         Topic::create($data);
+        $update_kategori = Ket::where('id_ket','=',$request->kategori_id)->increment('total_topics', 1);
         return redirect()->route('listTopic', $kategori->slug_kat);
     }
 
@@ -77,8 +89,7 @@ class ForumController extends Controller
         ->join('kets','topics.ket_id','=','kets.id_ket')
         ->join('users', 'topics.user_id','=','users.id')
         ->orderBy('topics.id_topic', 'desc')
-        ->limit(7)
-        ->get();
+        ->paginate(7);
         return view('pages.top-topics')->with(compact('topics'));
     }
 }

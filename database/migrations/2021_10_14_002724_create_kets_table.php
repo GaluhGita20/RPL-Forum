@@ -19,6 +19,8 @@ class CreateKetsTable extends Migration
             $table->string('slug_kat', 255);
             $table->text('desc');
             $table->string('image')->nullable();
+            $table->integer('total_topics')->default(0);
+            $table->integer('total_posts')->default(0);
             $table->timestamps();
         });
     }

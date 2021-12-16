@@ -150,7 +150,7 @@ $title = "Main Forum";
         <!-- TABLE COLUMN -->
         <div class="table-column centered padded-medium">
           <!-- TABLE TITLE -->
-          <p class="table-title">44</p>
+          <p class="table-title">{{$kategori->total_topics}}</p>
           <!-- /TABLE TITLE -->
         </div>
         <!-- /TABLE COLUMN -->
@@ -158,7 +158,7 @@ $title = "Main Forum";
         <!-- TABLE COLUMN -->
         <div class="table-column centered padded-medium">
           <!-- TABLE TITLE -->
-          <p class="table-title">236</p>
+          <p class="table-title">{{$kategori->total_posts}}</p>
           <!-- /TABLE TITLE -->
         </div>
         <!-- /TABLE COLUMN -->

@@ -137,12 +137,19 @@ $title = "Top Topics";
         </div>
         <!-- /TABLE ROW -->
         @endforeach
+        
+        
       </div>
       <!-- /TABLE BODY -->
+      
     </div>
     <!-- /TABLE -->
+    {{$topics->links()}}
+
+    
   </section>
   <!-- /SECTION -->
+  
 </div>
 <!-- /CONTENT GRID -->
 
