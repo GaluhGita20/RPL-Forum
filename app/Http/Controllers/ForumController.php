@@ -6,6 +6,7 @@ use App\Models\Ket;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Models\History;
 use DB;
 use Auth;
 
@@ -33,7 +34,7 @@ class ForumController extends Controller
         ->join('kets','topics.ket_id','=','kets.id_ket')
         ->join('users', 'topics.user_id','=','users.id')
         ->where('kets.slug_kat','=',$slug)
-        ->get();
+        ->paginate(5);
 
         // last post in each topic
         $last_posts = DB::table('diskusi_forums')
@@ -59,6 +60,7 @@ class ForumController extends Controller
     {
         $data = Ket::where('slug_kat', $slug)->get()->first();
         $kategoris = Ket::all();
+
         return view('pages.createTopic')->with(compact('data', 'kategoris'));
     }
 
@@ -79,6 +81,13 @@ class ForumController extends Controller
         );
         Topic::create($data);
         $update_kategori = Ket::where('id_ket','=',$request->kategori_id)->increment('total_topics', 1);
+
+        //set history user
+        $user = Auth::user();
+        $log=History::create([
+            'user_id'=>$user->id,
+            'history'=>'User telah menambah topik baru dengan judul '.$request->name
+        ]);
         return redirect()->route('listTopic', $kategori->slug_kat);
     }
 

@@ -111,7 +111,13 @@ $page = "forum";
               <!-- /USER AVATAR -->
               
               <!-- FORUM POST USER TITLE -->
-              <p class="forum-post-user-title"><a href="#">{{$post->name}}</a></p>
+              <p class="forum-post-user-title"><a 
+              @if($post->user_id != Auth::user()->id)
+              href="{{Route('view_infoUser', $post->user_id)}}"
+              @else
+              href="{{Route('profileUser')}}"
+              @endif
+              >{{$post->name}}</a></p>
               <!-- /FORUM POST USER TITLE -->
       
               <!-- FORUM POST USER TITLE -->
@@ -144,89 +150,7 @@ $page = "forum";
       </div>
       <!-- /FORUM POST LIST -->
 
-      <!-- SECTION PAGER BAR WRAP -->
-      <div class="section-pager-bar-wrap align-right">
-        <!-- SECTION PAGER BAR -->
-        <div class="section-pager-bar">
-          <!-- SECTION PAGER -->
-          <div class="section-pager">
-            <!-- SECTION PAGER ITEM -->
-            <div class="section-pager-item active">
-              <!-- SECTION PAGER ITEM TEXT -->
-              <p class="section-pager-item-text">01</p>
-              <!-- /SECTION PAGER ITEM TEXT -->
-            </div>
-            <!-- /SECTION PAGER ITEM -->
-      
-            <!-- SECTION PAGER ITEM -->
-            <div class="section-pager-item">
-              <!-- SECTION PAGER ITEM TEXT -->
-              <p class="section-pager-item-text">02</p>
-              <!-- /SECTION PAGER ITEM TEXT -->
-            </div>
-            <!-- /SECTION PAGER ITEM -->
-      
-            <!-- SECTION PAGER ITEM -->
-            <div class="section-pager-item">
-              <!-- SECTION PAGER ITEM TEXT -->
-              <p class="section-pager-item-text">03</p>
-              <!-- /SECTION PAGER ITEM TEXT -->
-            </div>
-            <!-- /SECTION PAGER ITEM -->
-      
-            <!-- SECTION PAGER ITEM -->
-            <div class="section-pager-item">
-              <!-- SECTION PAGER ITEM TEXT -->
-              <p class="section-pager-item-text">04</p>
-              <!-- /SECTION PAGER ITEM TEXT -->
-            </div>
-            <!-- /SECTION PAGER ITEM -->
-      
-            <!-- SECTION PAGER ITEM -->
-            <div class="section-pager-item">
-              <!-- SECTION PAGER ITEM TEXT -->
-              <p class="section-pager-item-text">05</p>
-              <!-- /SECTION PAGER ITEM TEXT -->
-            </div>
-            <!-- /SECTION PAGER ITEM -->
-      
-            <!-- SECTION PAGER ITEM -->
-            <div class="section-pager-item">
-              <!-- SECTION PAGER ITEM TEXT -->
-              <p class="section-pager-item-text">06</p>
-              <!-- /SECTION PAGER ITEM TEXT -->
-            </div>
-            <!-- /SECTION PAGER ITEM -->
-          </div>
-          <!-- /SECTION PAGER -->
-      
-          <!-- SECTION PAGER CONTROLS -->
-          <div class="section-pager-controls">
-            <!-- SLIDER CONTROL -->
-            <div class="slider-control left disabled">
-              <!-- SLIDER CONTROL ICON -->
-              <svg class="slider-control-icon icon-small-arrow">
-                <use xlink:href="#svg-small-arrow"></use>
-              </svg>
-              <!-- /SLIDER CONTROL ICON -->
-            </div>
-            <!-- /SLIDER CONTROL -->
-      
-            <!-- SLIDER CONTROL -->
-            <div class="slider-control right">
-              <!-- SLIDER CONTROL ICON -->
-              <svg class="slider-control-icon icon-small-arrow">
-                <use xlink:href="#svg-small-arrow"></use>
-              </svg>
-              <!-- /SLIDER CONTROL ICON -->
-            </div>
-            <!-- /SLIDER CONTROL -->
-          </div>
-          <!-- /SECTION PAGER CONTROLS -->
-        </div>
-        <!-- /SECTION PAGER BAR -->
-      </div>
-      <!-- /SECTION PAGER BAR WRAP -->
+      {{$posts->links()}}
 
       <!-- QUICK POST -->
       <div class="quick-post medium">

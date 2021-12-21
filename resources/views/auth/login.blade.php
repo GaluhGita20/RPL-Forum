@@ -52,7 +52,7 @@
       <!-- /LANDING INFO TITLE -->
 
       <!-- LANDING INFO TEXT -->
-      <p class="landing-info-text">The next generation social network &amp; community! Connect with your friends and play with our quests and badges gamification system!</p>
+      <p class="landing-info-text">The next generation of social network &amp; community ayo gabung dan mulai diskusi mengenai bencana dengan seluruh teman di seluruh Indonesia</p>
       <!-- /LANDING INFO TEXT -->
 
       <!-- TAB SWITCH -->

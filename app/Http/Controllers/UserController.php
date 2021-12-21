@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\KategoriForum;
 use App\Models\Topic;
+use App\Models\History;
+use Auth;
 
 
 class UserController extends Controller
@@ -38,6 +40,8 @@ class UserController extends Controller
 
     public function view_history()
     {
-        return view('pages.history');
+        $user = Auth::user();
+        $histories = History::where('user_id', '=', $user->id);
+        return view('pages.history', compact('histories'));
     }
 }

@@ -24,6 +24,8 @@ Route::group(['middleware'=>'auth'], function(){
     //User
     Route::get('/profile-user', [UserController::class,'view_profileUser'])->name('profileUser');
     Route::get('/history', [UserController::class,'view_history'])->name('history');
+    // View profile user where user_id is not Auth->user->id
+    Route::get('/history/user={id}', [HomeController::class,'view_profileUser'])->name('view_infoUser');
 
     //Top Topics
     Route::get('/top-topics', [ForumController::class,'view_topTopics'])->name('topTopics');

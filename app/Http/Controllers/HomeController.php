@@ -38,5 +38,11 @@ class HomeController extends Controller
     {
         return view('pages.login');
     }
+
+    public function view_profileUser($id)
+    {
+        $get_user = User::find($id);
+        return view('pages.profile-user2', compact('get_user'));
+    }
     
 }

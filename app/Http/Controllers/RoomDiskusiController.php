@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Ket;
 use App\Models\Topic;
+use App\Models\History;
 use App\Models\DiskusiForum;
 use Auth;
 use DB;
@@ -27,7 +28,7 @@ class RoomDiskusiController extends Controller
         ->select('diskusi_forums.id_diskusi', 'diskusi_forums.diskusi', 'diskusi_forums.user_id','diskusi_forums.created_at', 'users.name')
         ->join('users','diskusi_forums.user_id','=','users.id')
         ->where('diskusi_forums.topic_id','=',$id_room)
-        ->get();
+        ->paginate(8);
 
         //last post
         $last_post = DB::table('diskusi_forums')
@@ -56,6 +57,13 @@ class RoomDiskusiController extends Controller
         //update kategori
         $topic_temp = Topic::where('id_topic','=',$request->topic_id)->get()->first();
         $update_kategori = Ket::where('id_ket','=',$topic_temp->ket_id)->increment('total_posts', 1);
+
+        //set history user
+        $user = Auth::user();
+        $log=History::create([
+            'user_id'=>$user->id,
+            'history'=>'User telah membuat posting di room topik '.$topic_temp->name_topic
+        ]);
         return redirect()->back();
     }
 }

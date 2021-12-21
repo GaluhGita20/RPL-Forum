@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class History extends Model
 {
     use HasFactory;
-    
+    protected $table='histories';
+    protected $guarded=['id'];
+    protected $fillable=['user_id', 'history'];
 }
