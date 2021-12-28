@@ -11,29 +11,30 @@ Route::get('/view-login', function () {
     return view('auth.login')->name('view-login');
 });
 
-Route::group(['middleware'=>'auth'], function(){
+Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     //Forum
-    Route::get('/forum', [ForumController::class,'view_forum'])->name('mainForum');
-    Route::get('/forum/{slug}', [ForumController::class,'view_listTopic'])->name('listTopic');
-    Route::get('/{slug}/create-topic', [ForumController::class,'create_topic'])->name('createTopic');
-    Route::post('/forum/saveNewTopic', [ForumController::class,'saveNewTopic'])->name('saveNewTopic');
+    Route::get('/forum', [ForumController::class, 'view_forum'])->name('mainForum');
+    Route::get('/forum/{slug}', [ForumController::class, 'view_listTopic'])->name('listTopic');
+    Route::get('/{slug}/create-topic', [ForumController::class, 'create_topic'])->name('createTopic');
+    Route::post('/forum/saveNewTopic', [ForumController::class, 'saveNewTopic'])->name('saveNewTopic');
 
     //User
-    Route::get('/profile-user', [UserController::class,'view_profileUser'])->name('profileUser');
-    Route::get('/history', [UserController::class,'view_history'])->name('history');
+    Route::get('/profile-user', [UserController::class, 'view_profileUser'])->name('profileUser');
+    Route::post('/profile-user/update', [UserController::class, 'update_profileUser'])->name('updateUser');
+    Route::get('/history', [UserController::class, 'view_history'])->name('history');
     // View profile user where user_id is not Auth->user->id
-    Route::get('/history/user={id}', [HomeController::class,'view_profileUser'])->name('view_infoUser');
+    Route::get('/history/user={id}', [HomeController::class, 'view_profileUser'])->name('view_infoUser');
 
     //Top Topics
-    Route::get('/top-topics', [ForumController::class,'view_topTopics'])->name('topTopics');
+    Route::get('/top-topics', [ForumController::class, 'view_topTopics'])->name('topTopics');
 
 
     //Diskusi Topik
-    Route::get('/forum-diskusi/room={slug}', [RoomDiskusiController::class,'index'])->name('room_diskusi');
-    Route::post('/post-diskusi', [RoomDiskusiController::class,'post_diskusi'])->name('post_diskusi');
+    Route::get('/forum-diskusi/room={slug}', [RoomDiskusiController::class, 'index'])->name('room_diskusi');
+    Route::post('/post-diskusi', [RoomDiskusiController::class, 'post_diskusi'])->name('post_diskusi');
 });
 
 Auth::routes();
