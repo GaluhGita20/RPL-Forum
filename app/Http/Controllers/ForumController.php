@@ -97,7 +97,7 @@ class ForumController extends Controller
         ->select('topics.name_topic', 'topics.slug_topic', 'topics.created_at', 'topics.id_topic','topics.ket_id', 'kets.name_kategori', 'kets.desc', 'kets.id_ket','kets.slug_kat', 'users.name')
         ->join('kets','topics.ket_id','=','kets.id_ket')
         ->join('users', 'topics.user_id','=','users.id')
-        ->orderBy('topics.id_topic', 'desc')
+        ->orderBy('topics.total_likes', 'desc')
         ->paginate(7);
         return view('pages.top-topics')->with(compact('topics'));
     }
