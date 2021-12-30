@@ -31,7 +31,6 @@ Route::group(['middleware' => 'auth'], function () {
     //Top Topics
     Route::get('/top-topics', [ForumController::class, 'view_topTopics'])->name('topTopics');
 
-
     //Diskusi Topik
     Route::get('/forum-diskusi/room={slug}', [RoomDiskusiController::class, 'index'])->name('room_diskusi');
     Route::post('/post-diskusi', [RoomDiskusiController::class, 'post_diskusi'])->name('post_diskusi');
