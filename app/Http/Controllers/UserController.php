@@ -46,7 +46,7 @@ class UserController extends Controller
     public function view_history()
     {
         $user = Auth::user();
-        $histories = History::where('user_id', '=', $user->id);
+        $histories = History::where('user_id', '=', $user->id)->get();
         return view('pages.history', compact('histories'));
     }
 

@@ -16,7 +16,7 @@ class ForumController extends Controller
     public function view_forum()
     {
         $kategoris = Ket::all()->sortBy("id");
-        $topics = Topic::all();
+        $topics = Topic::latest()->get();
         // $contents = DB::table('topics')
         // ->select('topics.name_topic', 'topics.id_topic','topics.ket_id', 'kets.name_kategori', 'kets.desc', 'kets.id_ket')
         // ->join('kets','topics.ket_id','=','kets.id_ket')
@@ -94,7 +94,7 @@ class ForumController extends Controller
     public function view_topTopics()
     {
         $topics = DB::table('topics')
-        ->select('topics.name_topic', 'topics.slug_topic', 'topics.created_at', 'topics.id_topic','topics.ket_id', 'kets.name_kategori', 'kets.desc', 'kets.id_ket','kets.slug_kat', 'users.name')
+        ->select('topics.total_voices','topics.name_topic', 'topics.slug_topic', 'topics.created_at', 'topics.id_topic','topics.ket_id', 'kets.name_kategori', 'kets.desc', 'kets.id_ket','kets.slug_kat', 'users.name')
         ->join('kets','topics.ket_id','=','kets.id_ket')
         ->join('users', 'topics.user_id','=','users.id')
         ->orderBy('topics.total_likes', 'desc')

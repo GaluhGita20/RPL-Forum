@@ -163,7 +163,7 @@ $title = 'List Topics';
                                     <!-- /DISCUSSION PREVIEW META TEXT -->
 
                                     <!-- DISCUSSION PREVIEW META TEXT -->
-                                    <p class="discussion-preview-meta-text"><a href="#"> {{ $topic->name }}</a>
+                                    <p class="discussion-preview-meta-text"><a href="#"> {{ $topic->name_topic }}</a>
                                         {{ \Carbon\Carbon::parse($topic->created_at)->diffForHumans() }}</p>
                                     <!-- /DISCUSSION PREVIEW META TEXT -->
                                 </div>
